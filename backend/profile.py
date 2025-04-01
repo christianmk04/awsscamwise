@@ -585,4 +585,4 @@ if __name__ == '__main__':
         # To check when the job is scheduled to run next
         print(job)
 
-    app.run(debug=True, port=5002, use_reloader=False)
+    app.run(debug=True, port=5002, use_reloader=False, host="0.0.0.0")

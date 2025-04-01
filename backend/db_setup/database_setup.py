@@ -339,16 +339,20 @@ print("News Articles added successfully.")
 
 
 # Add email_records
-mock_email_records = './db_setup/mock_data/email_records.json'
-with open(mock_email_records, encoding="utf-8") as json_file:
-    email_records = json.load(json_file)
+# mock_email_records = './db_setup/mock_data/email_records.json'
+# with open(mock_email_records, encoding="utf-8") as json_file:
+#     email_records = json.load(json_file)
 
-for record in email_records:
-    cursor.execute("""
-        INSERT INTO email_records (user_id, record_date, emails_scanned, phishing_emails)
-        VALUES (%s, %s, %s, %s)
-        """, (record["user_id"], record["record_date"], record["emails_scanned"], record["phishing_emails"]))
-print("Email Records added successfully.")
+# for record in email_records:
+
+#     # Change date format to YYYY-MM-DD
+#     record["record_date"] = record["record_date"].split("T")[0]
+
+#     cursor.execute("""
+#         INSERT INTO email_records (user_id, record_date, emails_scanned, phishing_emails)
+#         VALUES (%s, %s, %s, %s)
+#         """, (record["user_id"], record["record_date"], record["emails_scanned"], record["phishing_emails"]))
+# print("Email Records added successfully.")
 
 # Close the cursor and connection
 connection.commit()

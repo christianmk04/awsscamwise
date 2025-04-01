@@ -97,4 +97,4 @@ def process_session_request():
         return jsonify({"error": str(e)}),500
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5030)
+    app.run(debug=True, port=5030, host="0.0.0.0")

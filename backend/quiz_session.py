@@ -200,4 +200,4 @@ def delete_quiz_sessions(quiz_id):
 
 
 if __name__ == '__main__':
-    app.run(port=5006, debug=True)
+    app.run(port=5006, debug=True, host="0.0.0.0")

@@ -276,4 +276,4 @@ if __name__ == "__main__":
         # To check the scheduled jobs
         print(job)
 
-    app.run(debug=True, port=5080, use_reloader=False)
+    app.run(debug=True, port=5080, use_reloader=False, host="0.0.0.0")
