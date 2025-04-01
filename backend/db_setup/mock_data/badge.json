@@ -1,0 +1,110 @@
+[
+    {
+        "badgeCode": "scam_xp_badge_novice",
+        "name": "Scam Fighter Novice 🆕",
+        "description": "Awarded for earning 500 XP from completing scam exercises.",
+        "badge_type": "scam_spotter",
+        "tier": "Black",
+        "threshold": 500,
+        "icon": "/scam_spotter_black.png"
+    },
+    {
+        "badgeCode": "scam_xp_badge_intermediate",
+        "name": "Scam Fighter Intermediate 🫱🏼‍🫲🏽",
+        "description": "Awarded for earning 1000 XP from completing scam exercises.",
+        "badge_type": "scam_spotter",
+        "tier": "Bronze",
+        "threshold": 1000,
+        "icon": "/scam_spotter_bronze.png"
+    },
+    {
+        "badgeCode": "scam_xp_badge_veteran",
+        "name": "Scam Fighter Veteran 😎",
+        "description": "Awarded for earning 1500 XP from completing scam exercises.",
+        "badge_type": "scam_spotter",
+        "tier": "Silver",
+        "threshold": 1500,
+        "icon": "/scam_spotter_silver.png"
+    },
+    {
+        "badgeCode": "scam_xp_badge_master",
+        "name": "Scam Fighter Master 👨🏻‍🔬",
+        "description": "Awarded for earning 2000 XP from completing scam exercises.",
+        "badge_type": "scam_spotter",
+        "tier": "Gold",
+        "threshold": 2000,
+        "icon": "/scam_spotter_gold.png"
+    },
+    {
+        "badgeCode": "quiz_xp_badge_novice",
+        "name": "Quiz Master Novice 🆕",
+        "description": "Awarded for earning 500 XP from completing quizzes.",
+        "badge_type": "quiz_master",
+        "tier": "Black",
+        "threshold": 500,
+        "icon": "/quiz_master_black.png"
+    },
+    {
+        "badgeCode": "quiz_xp_badge_intermediate",
+        "name": "Quiz Master Intermediate 🫱🏼‍🫲🏽",
+        "description": "Awarded for earning 1000 XP from completing quizzes",
+        "badge_type": "quiz_master",
+        "tier": "Bronze",
+        "threshold": 1000,
+        "icon": "/quiz_master_bronze.png"
+    },
+    {
+        "badgeCode": "quiz_xp_badge_veteran",
+        "name": "Quiz Master Veteran 😎",
+        "description": "Awarded for earning 1500 XP from completing quizzes.",
+        "badge_type": "quiz_master",
+        "tier": "Silver",
+        "threshold": 1500,
+        "icon": "/quiz_master_silver.png"
+    },
+    {
+        "badgeCode": "quiz_xp_badge_master",
+        "name": "Quiz Master Master 👨🏻‍🔬",
+        "description": "Awarded for earning 2000 XP from completing quizzes.",
+        "badge_type": "quiz_master",
+        "tier": "Gold",
+        "threshold": 2000,
+        "icon": "/scam_spotter_gold.png"
+    },
+    {
+        "badgeCode": "quiz_contributor_badge_idea_sprout",
+        "name": "Idea Sprout 🌱",
+        "description": "Awarded for creating and contributing 5 quizzes to the platform",
+        "badge_type": "quizzes_contributed",
+        "tier": "Black",
+        "threshold": 5,
+        "icon": "/contributor_black.png"
+    },
+    {
+        "badgeCode": "quiz_contributor_badge_question_crafter",
+        "name": "Question Crafter ✏️",
+        "description": "Awarded for creating and contributing 5 quizzes to the platform",
+        "badge_type": "quizzes_contributed",
+        "tier": "Bronze",
+        "threshold": 10,
+        "icon": "/contributor_bronze.png"
+    },
+    {
+        "badgeCode": "quiz_contributor_badge_quiz_artisan",
+        "name": "Quiz Artisan 🎨",
+        "description": "Awarded for creating and contributing 25 quizzes to the platform",
+        "badge_type": "quizzes_contributed",
+        "tier": "Silver",
+        "threshold": 25,
+        "icon": "/contributor_silver.png"
+    },
+    {
+        "badgeCode": "quiz_contributor_badge_content_architect",
+        "name": "Content Architect 🏛️",
+        "description": "Awarded for creating and contributing 50 quizzes to the platform",
+        "badge_type": "quizzes_contributed",
+        "tier": "Gold",
+        "threshold": 50,
+        "icon": "/contributor_gold.png"
+    }
+]

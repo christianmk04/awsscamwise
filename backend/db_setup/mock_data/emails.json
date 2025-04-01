@@ -1,0 +1,1159 @@
+[
+    {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Dear Chase Customer,",
+          "body": "Your latest credit card statement is now available online. To ensure your account security, please review your transactions and report any discrepancies.",
+          "paragraphs": [
+            "As part of our commitment to keeping your finances safe, we encourage you to enable two-factor authentication if you haven't already.",
+            "To view your statement, click the secure link below. If you have any concerns, please contact our customer service at 1-800-432-3117 or visit your local branch."
+          ],
+          "links": [
+            {"id": "content-link-1", "text": "View Your Statement", "url": "https://secure-chaselogin.com/statements"},
+            {"id": "content-link-2", "text": "Contact Support", "url": "https://chasebank-secure.com/help"}
+          ],
+          "closing": "Sincerely,",
+          "signature": "Chase Bank Security Team"
+        },
+        "email_header": {
+          "id": "email-header-1",
+          "from": "customer.service@chase.com",
+          "reply-to": "support@chase.com",
+          "to": "user@example.com",
+          "subject": "Your Chase Credit Card Statement is Ready",
+          "date": "2025-01-30",
+          "mailed-by": "chase.com",
+          "signed-by": "chase.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-1", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/chase.com",
+        "explanations": [
+          {"component": "email_header", "explanation": "The sender's address (customer.service@chase.com) matches Chase's official domain—nice and consistent!"},
+          {"component": "email_auth", "explanation": "All checks (SPF, DKIM, DMARC) passed, a gold standard for legitimacy."},
+          {"component": "security", "explanation": "TLS encryption is enabled, ensuring your data is safely transmitted."}
+        ]
+      }
+      ,
+    {
+        "is_scam": true,
+        "email_content": {
+            "greeting": "Attention PayPal User! Urgent Action Required!",
+            "body": "We have detected suspicious activity on your PayPal account from IP address 183.92.35.64. Immediate verification is required to prevent your account from being permanently suspended.",
+            "paragraphs": [
+                "Someone recently tried logging in from Moscow, Russia at 3:47 AM on March 21, 2025. If this was not you, please confirm your identity by clicking the verification link below.",
+                "Failure to verify within 24 hours will result in a temporary account suspension and possible limitation of your funds transfer ability."
+            ],
+           "links": [
+                {"id": "content-link-1", "text": "Verify Your Account", "url": "http://paypall-security.net"},
+                {"id": "content-link-2", "text": "Contact PayPal Support", "url": "http://support-paypall.net"}
+            ],
+            "closing": "Best regards,",
+            "signature": "PayPal Security & Fraud Prevention Team"
+        },
+        "email_header": {
+            "id": "email-header-2",
+            "from": "security.team@paypal-alerts.net",
+            "reply-to": "no-reply@paypal.com",
+            "to": "user@example.com",
+            "subject": "⚠️ Suspicious Login Attempt Detected from Russia! Immediate Action Required!",
+            "date": "2025-01-30",
+            "mailed-by": "paypal-alerts.net",
+            "signed-by": "paypal-alerts.net",
+            "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+            "SPF": "FAIL",
+            "DKIM": "FAIL",
+            "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-2"],
+        "check_indicators": ["email-header-2", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 2,
+        "logo_src": "https://logo.clearbit.com/paypal.com",
+        "explanations": [
+            {"component": "email_header", "explanation": "The sender's domain (paypal-alerts.net) is off—real PayPal emails come from paypal.com."},
+            {"component": "email_auth", "explanation": "All authentication checks failed, which is a big red flag."},
+            {"component": "links", "explanation": "The URL (paypall-security.net) looks like a typo and is not what you'd expect from PayPal."},
+            {"component": "overall", "explanation": "When everything seems a bit off, it's probably a scam. Stay cautious!"}
+          ]
+    },
+    {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Dear Shopee Member,",
+          "body": "We are thrilled to inform you that you have been selected as the winner of our $1,000 Shopee Gift Voucher giveaway for loyal members!",
+          "paragraphs": [
+            "To claim your prize, simply confirm your shipping details by clicking the secure verification link below. Our system will automatically process your voucher after verification.",
+            "Act fast! This exclusive opportunity expires in 24 hours. We've already attempted to contact you twice about this prize."
+          ],
+          "links": [
+            {"id": "content-link-1", "text": "Claim Your Gift Voucher", "url": "http://shopee-reward.com"},
+            {"id": "content-link-2", "text": "Terms and Conditions", "url": "http://shopee-pr1me-rewards.com/terms"}
+          ],
+          "closing": "Best wishes,",
+          "signature": "Shopee Rewards Team"
+        },
+        "email_header": {
+          "id": "email-header-3",
+          "from": "rewards@shopee-rewards.com",
+          "reply-to": "customer.service@shopee-rewards.com",
+          "to": "user@example.com",
+          "subject": "🎉 Congratulations! You Won a $1,000 Shopee Gift Voucher!",
+          "date": "2025-01-30",
+          "mailed-by": "shopee-rewards.com",
+          "signed-by": "shopee-rewards.com",
+          "security": "No encryption detected"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "NONE",
+          "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-3", "security"],
+        "check_indicators": ["email-header-3", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 1,
+        "logo_src": "https://logo.clearbit.com/shopee.com",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (shopee-rewards.com) is a bit off—official Shopee emails typically come from shopee.com."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks failed (SPF, DKIM, DMARC), which is a serious red flag."
+          },
+          {
+            "component": "links",
+            "explanation": "The URLs, such as 'shopee-reward.com', appear misspelled and are likely part of a phishing scheme."
+          },
+          {
+            "component": "overall",
+            "explanation": "A $1,000 voucher giveaway from an unusual domain? That's too good (and too suspicious) to be true!"
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Dear Courts Customer,",
+          "body": "Your recent order #C1234567 has been successfully processed. You can view your purchase details by clicking the link below.",
+          "paragraphs": [
+            "Thank you for shopping with Courts! Your order for the stylish furniture is expected to ship on March 25, 2025. If you have any questions about your order, our customer support team is here to help 24/7.",
+            "We recommend keeping your order details for future reference. Your delivery tracking information will be sent in a separate email once your item ships."
+          ],
+          "links": [
+            {"id": "content-link-1", "text": "View Order Details", "url": "https://www.courts.com/order-details/C1234567"},
+            {"id": "content-link-2", "text": "Contact Support", "url": "https://www.courts.com/support"}
+          ],
+          "closing": "Best regards,",
+          "signature": "Courts Customer Support Team"
+        },
+        "email_header": {
+          "id": "email-header-4",
+          "from": "orders@courts.com",
+          "reply-to": "support@courts.com",
+          "to": "user@example.com",
+          "subject": "Your Courts Order #C1234567 is Confirmed",
+          "date": "2025-02-06",
+          "mailed-by": "courts.com",
+          "signed-by": "courts.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-4", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/courts.com",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's email (orders@courts.com) and domain are exactly what you'd expect from Courts."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks have passed, which is a reassuring sign of a genuine email."
+          },
+          {
+            "component": "links",
+            "explanation": "The links lead directly to the official Courts website, so you know you're in safe territory."
+          },
+          {
+            "component": "content",
+            "explanation": "Clear order details like the order number and shipping info further confirm this is a legitimate order confirmation."
+          }
+        ]
+      },
+        {
+          "is_scam": true,
+          "email_content": {
+            "greeting": "Important Lazada Account Update!",
+            "body": "Your Lazada account is currently locked due to multiple failed login attempts from Barcelona, Spain. To prevent further issues, please verify your identity immediately.",
+            "paragraphs": [
+              "Our security system has detected 5 unsuccessful login attempts to your account in the past 48 hours. Please click the link below to complete the verification process and unlock your account.",
+              "Failure to verify your identity within 48 hours may result in account suspension and the cancellation of any pending orders."
+            ],
+            "links": [
+              { "id": "content-link-1", "text": "Unlock Your Lazada Account", "url": "http://lazada-accounthelp.sg/unlock" },
+              { "id": "content-link-2", "text": "Contact Lazada Support", "url": "http://support-lazada.sg/help" }
+            ],
+            "closing": "Sincerely,",
+            "signature": "Lazada Account Protection Team"
+          },
+          "email_header": {
+            "id": "email-header-5",
+            "from": "account-protection@lazada-account-services.sg",
+            "reply-to": "security@lazada.sg",
+            "to": "user@example.com",
+            "subject": "⚠️ Your Lazada Account is Locked - Security Alert!",
+            "date": "2025-02-06",
+            "mailed-by": "lazada-account-services.sg",
+            "signed-by": "lazada-account-services.sg",
+            "security": "TLS encryption enabled"
+          },
+          "email_auth": {
+            "SPF": "FAIL",
+            "DKIM": "FAIL",
+            "DMARC": "FAIL"
+          },
+          "persona": "user@example.com",
+          "scam_indicators": ["content-link-1", "content-link-2", "email-header-5"],
+          "check_indicators": ["email-header-5", "content-link-1", "content-link-2"],
+          "is_user_created": false,
+          "average_rating": 2,
+          "logo_src": "https://logo.clearbit.com/lazada.sg",
+          "explanations": [
+            {
+              "component": "email_header",
+              "explanation": "The sender's domain (lazada-account-services.sg) looks unusual—official Lazada emails usually come from lazada.sg."
+            },
+            {
+              "component": "email_auth",
+              "explanation": "All authentication checks (SPF, DKIM, DMARC) have failed—a major red flag for scams."
+            },
+            {
+              "component": "links",
+              "explanation": "The URLs like 'lazada-accounthelp.sg' seem off; they’re likely typos or spoofed sites."
+            },
+            {
+              "component": "overall",
+              "explanation": "A locked account warning paired with all these red flags? It’s a scam—proceed with extreme caution!"
+            }
+          ]
+        },
+        {
+          "is_scam": true,
+          "email_content": {
+            "greeting": "Dear Valued Customer,",
+            "body": "You've won a complimentary 7-night all-inclusive stay at the Sentosa Resort! To claim your prize, simply fill out your personal details below.",
+            "paragraphs": [
+              "This incredible offer is only available for a limited time. As a valued member, you were randomly selected from our loyalty program database for this exclusive offer.",
+              "Fill out your details and secure your dream vacation today. Your package includes airfare, meals, and access to all premium resort amenities."
+            ],
+            "links": [
+              { "id": "content-link-1", "text": "Claim Your Vacation Package", "url": "http://sentosa-vacation-rewards.sg" },
+              { "id": "content-link-2", "text": "View Vacation Details", "url": "http://sentosa-vacation-rewards.sg/details" }
+            ],
+            "closing": "Warm regards,",
+            "signature": "Sentosa Rewards Program"
+          },
+          "email_header": {
+            "id": "email-header-6",
+            "from": "rewards@sentosa-rewards.sg",
+            "reply-to": "support@sentosa-rewards.sg",
+            "to": "user@example.com",
+            "subject": "🎉 Congratulations! You've Won a Luxury Sentosa Resort Vacation!",
+            "date": "2025-02-06",
+            "mailed-by": "sentosa-rewards.sg",
+            "signed-by": "sentosa-rewards.sg",
+            "security": "No encryption detected"
+          },
+          "email_auth": {
+            "SPF": "FAIL",
+            "DKIM": "NONE",
+            "DMARC": "FAIL"
+          },
+          "persona": "user@example.com",
+          "scam_indicators": ["content-link-1", "content-link-2", "email-header-6", "security"],
+          "check_indicators": ["email-header-6", "content-link-1", "content-link-2"],
+          "is_user_created": false,
+          "average_rating": 1,
+          "logo_src": "https://logo.clearbit.com/sentosa.com.sg",
+          "explanations": [
+            {
+              "component": "email_header",
+              "explanation": "The sender's domain (sentosa-rewards.sg) doesn’t match what you’d expect from an official Sentosa Resort email."
+            },
+            {
+              "component": "email_auth",
+              "explanation": "Authentication checks are failing across the board, which is a common scam signal."
+            },
+            {
+              "component": "links",
+              "explanation": "The URLs are misspelled or unfamiliar—definitely not the official site you’d trust for a luxury vacation."
+            },
+            {
+              "component": "overall",
+              "explanation": "A too-good-to-be-true luxury vacation offer with these red flags? This email is almost certainly a scam."
+            }
+          ]
+        },
+        {
+          "is_scam": false,
+          "email_content": {
+            "greeting": "Hello DigitalSafe User,",
+            "body": "We wanted to inform you about the latest updates to our terms and privacy policy. Please review the new policies to stay informed about how we protect your data.",
+            "paragraphs": [
+              "We take your privacy seriously and continuously work to enhance the security of our platform. The key changes include updates to our data retention policies and enhanced security features. Please review the full updated terms by clicking the link below."
+            ],
+            "links": [
+              { "id": "content-link-1", "text": "Read the Updated Terms", "url": "https://www.digitalsafe.com.sg/terms" },
+              { "id": "content-link-2", "text": "Contact Support", "url": "https://www.digitalsafe.com.sg/support" }
+            ],
+            "closing": "Best regards,",
+            "signature": "DigitalSafe Legal & Privacy Team"
+          },
+          "email_header": {
+            "id": "email-header-7",
+            "from": "no-reply@digitalsafe.com.sg",
+            "reply-to": "support@digitalsafe.com.sg",
+            "to": "user@example.com",
+            "subject": "Important: Updated DigitalSafe Terms and Privacy Policy",
+            "date": "2025-02-06",
+            "mailed-by": "digitalsafe.com.sg",
+            "signed-by": "digitalsafe.com.sg",
+            "security": "TLS encryption enabled"
+          },
+          "email_auth": {
+            "SPF": "PASS",
+            "DKIM": "PASS",
+            "DMARC": "PASS"
+          },
+          "persona": "user@example.com",
+          "scam_indicators": [],
+          "check_indicators": ["email-header-7", "content-link-1", "content-link-2"],
+          "is_user_created": false,
+          "average_rating": 4,
+          "logo_src": "https://logo.clearbit.com/digitalsafe.com.sg",
+          "explanations": [
+            {
+              "component": "email_header",
+              "explanation": "The sender's address (no-reply@digitalsafe.com.sg) and domain are consistent with DigitalSafe's official communications."
+            },
+            {
+              "component": "email_auth",
+              "explanation": "All authentication checks have passed, which is a reassuring sign of a genuine update."
+            },
+            {
+              "component": "links",
+              "explanation": "The links clearly point to the official DigitalSafe website, so there's little cause for concern here."
+            },
+            {
+              "component": "content",
+              "explanation": "The detailed policy update and clear contact info further confirm that this email is legitimate."
+            }
+          ]
+        },
+        {
+          "is_scam": true,
+          "email_content": {
+            "greeting": "Alert: Your StarHub Cloud Account is at Risk!",
+            "body": "We have detected suspicious activity on your StarHub Cloud account from device 'iPhone XR' in Tokyo, Japan. Immediate action is required to secure your data and photos.",
+            "paragraphs": [
+              "To prevent unauthorized access to your account and preserve your personal files, please verify your identity by clicking the link below within the next 12 hours.",
+              "Failure to respond within 24 hours will result in a permanent suspension of your account and possible data loss as a security precaution."
+            ],
+            "links": [
+              { "id": "content-link-1", "text": "Secure My StarHub Cloud Account", "url": "http://starhubcloud-verfy.sg" },
+              { "id": "content-link-2", "text": "Contact StarHub Support", "url": "http://starhub-support.sg" }
+            ],
+            "closing": "Best regards,",
+            "signature": "StarHub Cloud Security Team"
+          },
+          "email_header": {
+            "id": "email-header-8",
+            "from": "security-alerts@starhubcloud-verification.sg",
+            "reply-to": "no-reply@starhub.com",
+            "to": "user@example.com",
+            "subject": "⚠️ Suspicious Activity Detected on Your StarHub Cloud Account from Tokyo!",
+            "date": "2025-02-06",
+            "mailed-by": "starhubcloud-verification.sg",
+            "signed-by": "starhubcloud-verification.sg",
+            "security": "TLS encryption enabled"
+          },
+          "email_auth": {
+            "SPF": "FAIL",
+            "DKIM": "FAIL",
+            "DMARC": "FAIL"
+          },
+          "persona": "user@example.com",
+          "scam_indicators": ["content-link-1", "content-link-2", "email-header-8"],
+          "check_indicators": ["email-header-8", "content-link-1", "content-link-2"],
+          "is_user_created": false,
+          "average_rating": 2,
+          "logo_src": "https://logo.clearbit.com/starhub.com",
+          "explanations": [
+            {
+              "component": "email_header",
+              "explanation": "The sender's domain (starhubcloud-verification.sg) is not what you’d expect from the official StarHub; it looks suspicious."
+            },
+            {
+              "component": "email_auth",
+              "explanation": "Authentication checks have all failed—this is a major warning sign of a scam."
+            },
+            {
+              "component": "links",
+              "explanation": "The URLs, such as 'starhubcloud-verfy.sg', seem contrived and are likely part of a phishing scheme."
+            },
+            {
+              "component": "overall",
+              "explanation": "Multiple red flags in the header, auth, and links indicate that this email is a phishing attempt. Don’t click anything!"
+            }
+          ]
+        },
+        {
+          "is_scam": false,
+          "email_content": {
+            "greeting": "Dear Courts Customer,",
+            "body": "Thank you for your recent purchase! Your order #C1234567 has been shipped and is on its way to you.",
+            "paragraphs": [
+              "You can track your order using the link below. Your package contains: 1x Home Essentials Throw Blanket, 2x Threshold Bath Towels, 1x Kitchen Storage Container Set.",
+              "If you have any questions about your shipment, feel free to contact us anytime. Estimated delivery date: March 25, 2025."
+            ],
+            "links": [
+              { "id": "content-link-1", "text": "Track My Order", "url": "https://www.courts.com/orders/tracking/C1234567" },
+              { "id": "content-link-2", "text": "Contact Support", "url": "https://www.courts.com/help" }
+            ],
+            "closing": "Thank you for shopping at Courts,",
+            "signature": "Courts Guest Services Team"
+          },
+          "email_header": {
+            "id": "email-header-9",
+            "from": "orders@courts.com",
+            "reply-to": "customerservice@courts.com",
+            "to": "user@example.com",
+            "subject": "Your Courts Order #C1234567 Has Shipped!",
+            "date": "2025-02-06",
+            "mailed-by": "courts.com",
+            "signed-by": "courts.com",
+            "security": "TLS encryption enabled"
+          },
+          "email_auth": {
+            "SPF": "PASS",
+            "DKIM": "PASS",
+            "DMARC": "PASS"
+          },
+          "persona": "user@example.com",
+          "scam_indicators": [],
+          "check_indicators": ["email-header-9", "content-link-1", "content-link-2"],
+          "is_user_created": false,
+          "average_rating": 4,
+          "logo_src": "https://logo.clearbit.com/courts.com",
+          "explanations": [
+            {
+              "component": "email_header",
+              "explanation": "The sender's email (orders@courts.com) and domain match Courts' official communications perfectly."
+            },
+            {
+              "component": "email_auth",
+              "explanation": "All authentication checks have passed, which is a very reassuring sign."
+            },
+            {
+              "component": "links",
+              "explanation": "The links lead directly to the official Courts website, ensuring you’re on the right track."
+            },
+            {
+              "component": "content",
+              "explanation": "Clear order details, like the order number and shipping info, further confirm the email’s legitimacy."
+            }
+          ]
+        }
+      
+      ,
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Urgent: JobsCentral Security Alert!",
+          "body": "We noticed unusual login activity on your JobsCentral account from Melbourne, Australia at 2:36 AM today. To keep your professional network secure, you must verify this login attempt.",
+          "paragraphs": [
+            "Please verify your identity by clicking the link below within 24 hours. Failing to do so will result in temporary account suspension to protect your professional connections and personal information.",
+            "This is a precautionary measure to protect your profile from unauthorized access. We take your career security seriously."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Verify Your JobsCentral Account", "url": "http://jobscentral-security.com.sg" },
+            { "id": "content-link-2", "text": "Report Unauthorized Access", "url": "http://jobscentral-security.com.sg/report" }
+          ],
+          "closing": "Best regards,",
+          "signature": "JobsCentral Trust & Security Team"
+        },
+        "email_header": {
+          "id": "email-header-10",
+          "from": "security-alerts@jobscentral-security.com.sg",
+          "reply-to": "no-reply@jobscentral.com.sg",
+          "to": "user@example.com",
+          "subject": "⚠️ Unusual Login Activity Detected on Your JobsCentral Account from Australia!",
+          "date": "2025-02-06",
+          "mailed-by": "jobscentral-security.com.sg",
+          "signed-by": "jobscentral-security.com.sg",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "FAIL",
+          "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-10"],
+        "check_indicators": ["email-header-10", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 2,
+        "logo_src": "https://logo.clearbit.com/jobscentral.com.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (jobscentral-security.com.sg) is off—official JobsCentral emails typically come from jobscentral.com.sg."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks failed (SPF, DKIM, DMARC), which is a major red flag."
+          },
+          {
+            "component": "links",
+            "explanation": "The URLs (like jobscentral-security.com.sg) seem contrived and don’t match what you’d expect from a genuine site."
+          },
+          {
+            "component": "overall",
+            "explanation": "A security alert with all these red flags? This email is almost certainly a scam—stay cautious!"
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Congratulations from NTUC FairPrice!",
+          "body": "You've been selected to receive a $500 NTUC FairPrice Gift Card! As a valued member, you were randomly chosen from our customer database for our monthly appreciation program.",
+          "paragraphs": [
+            "This is an exclusive offer available only to a select group of our most loyal members. To claim your gift card, just click the link below and provide your membership details for verification."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Claim My $500 Gift Card", "url": "http://fairprice-rewards.sg" },
+            { "id": "content-link-2", "text": "Reward Program Details", "url": "http://fairprice-rewards.sg/details" }
+          ],
+          "closing": "Sincerely,",
+          "signature": "NTUC FairPrice Rewards Team"
+        },
+        "email_header": {
+          "id": "email-header-11",
+          "from": "member-rewards@fairprice-rewards.sg",
+          "reply-to": "support@fairprice-rewards.sg",
+          "to": "user@example.com",
+          "subject": "🎉 You've Been Selected for a $500 NTUC FairPrice Gift Card!",
+          "date": "2025-02-06",
+          "mailed-by": "fairprice-rewards.sg",
+          "signed-by": "fairprice-rewards.sg",
+          "security": "No encryption detected"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "NONE",
+          "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-11", "security"],
+        "check_indicators": ["email-header-11", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 1,
+        "logo_src": "https://logo.clearbit.com/fairprice.com.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (fairprice-rewards.sg) doesn’t match the official FairPrice domain, which is suspicious."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "Authentication checks failed across the board—a clear indicator of a scam."
+          },
+          {
+            "component": "links",
+            "explanation": "The URLs like 'fairprice-rewards.sg' appear misspelled or spoofed."
+          },
+          {
+            "component": "overall",
+            "explanation": "A $500 gift card offer from an unusual domain? This is too good (and too sketchy) to be true!"
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Hi Spotify Premium Subscriber,",
+          "body": "We've added new features to your Spotify account to enhance your listening experience. Check out these updates by clicking the link below.",
+          "paragraphs": [
+            "We always aim to improve your music streaming experience. New features include enhanced playlist creation tools, improved audio quality settings, and expanded podcast recommendations based on your preferences."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Explore New Features", "url": "https://www.spotify.com/account/overview" },
+            { "id": "content-link-2", "text": "Contact Support", "url": "https://www.spotify.com/support" }
+          ],
+          "closing": "Enjoy the music,",
+          "signature": "The Spotify Team"
+        },
+        "email_header": {
+          "id": "email-header-12",
+          "from": "no-reply@spotify.com",
+          "reply-to": "support@spotify.com",
+          "to": "user@example.com",
+          "subject": "New Premium Features Added to Your Spotify Account",
+          "date": "2025-02-06",
+          "mailed-by": "spotify.com",
+          "signed-by": "spotify.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-12", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/spotify.com",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (spotify.com) is official and exactly what you'd expect from Spotify."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks passed, confirming the email's legitimacy."
+          },
+          {
+            "component": "links",
+            "explanation": "The links lead directly to Spotify's website, ensuring you're not being redirected to a spoofed page."
+          },
+          {
+            "component": "content",
+            "explanation": "The content is detailed and consistent with previous Spotify update emails."
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Important: Your DBS Account is at Risk!",
+          "body": "We have detected suspicious activities on your account from an unrecognized device in Kiev, Ukraine. To avoid losing access, please verify your identity immediately.",
+          "paragraphs": [
+            "To secure your account and prevent unauthorized transfers, please follow the link below and complete the verification process. Our fraud detection system flagged multiple login attempts from IP address 175.45.176.22."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Verify Your DBS Account", "url": "http://dbs-secure-portal.com.sg/verify" },
+            { "id": "content-link-2", "text": "Report Suspicious Activity", "url": "http://dbs-secure-portal.com.sg/report" }
+          ],
+          "closing": "Sincerely,",
+          "signature": "DBS Security & Fraud Prevention Team"
+        },
+        "email_header": {
+          "id": "email-header-13",
+          "from": "account-security@dbs-secure-portal.com.sg",
+          "reply-to": "security@dbs.com.sg",
+          "to": "user@example.com",
+          "subject": "⚠️ Your DBS Account is at Risk! Immediate Action Needed",
+          "date": "2025-02-06",
+          "mailed-by": "dbs-secure-portal.com.sg",
+          "signed-by": "dbs-secure-portal.com.sg",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "FAIL",
+          "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-13"],
+        "check_indicators": ["email-header-13", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 2,
+        "logo_src": "https://logo.clearbit.com/dbs.com.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (dbs-secure-portal.com.sg) doesn't match DBS's standard domain (dbs.com.sg), which is a red flag."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "Authentication checks have all failed—this is a major warning sign."
+          },
+          {
+            "component": "links",
+            "explanation": "The URLs (e.g. dbs-secure-portal.com.sg) seem off and are likely spoofed."
+          },
+          {
+            "component": "overall",
+            "explanation": "A security alert with these discrepancies indicates this email is not legitimate. Do not click any links!"
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Hello Slack Workspace Admin,",
+          "body": "We have some exciting news! Your Slack workspace now has access to premium features. Click below to start using them.",
+          "paragraphs": [
+            "We appreciate your loyalty, and as a token of our appreciation, we're offering you a complimentary 30-day trial of Slack Premium. New features include unlimited message history, advanced analytics, and priority support."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Activate Premium Features", "url": "https://slack.com/admin/workspace-settings" },
+            { "id": "content-link-2", "text": "Learn More About Premium", "url": "https://slack.com/help/premium" }
+          ],
+          "closing": "Best regards,",
+          "signature": "The Slack Team"
+        },
+        "email_header": {
+          "id": "email-header-14",
+          "from": "no-reply@slack.com",
+          "reply-to": "support@slack.com",
+          "to": "user@example.com",
+          "subject": "Your Slack Workspace Now Includes Premium Features!",
+          "date": "2025-02-06",
+          "mailed-by": "slack.com",
+          "signed-by": "slack.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-14", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/slack.com",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's email (no-reply@slack.com) and domain are official, as expected from Slack."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks passed, which adds to the email’s credibility."
+          },
+          {
+            "component": "links",
+            "explanation": "The links direct you to Slack's official website, so there’s no cause for concern here."
+          },
+          {
+            "component": "content",
+            "explanation": "The email content about premium features aligns well with known Slack updates."
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Alert: Immediate Action Required!",
+          "body": "Your Netflix account has been flagged for suspicious activity. Please verify your payment information to avoid account suspension.",
+          "paragraphs": [
+            "To confirm your account and prevent disruption of service, click the link below to update your payment details."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Update Payment Info", "url": "http://netflix-account-update.com" },
+            { "id": "content-link-2", "text": "Contact Netflix Support", "url": "http://netflix-account-update.com/support" }
+          ],
+          "closing": "Best regards,",
+          "signature": "Netflix Support Team"
+        },
+        "email_header": {
+          "id": "email-header-15",
+          "from": "support@netflix-account-update.com",
+          "reply-to": "security@netflix.com",
+          "to": "user@example.com",
+          "subject": "⚠️ Action Needed: Verify Your Netflix Account!",
+          "date": "2025-02-06",
+          "mailed-by": "netflix-account-update.com",
+          "signed-by": "netflix-account-update.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "FAIL",
+          "DMARC": "FAIL"
+        },
+        "persona": "user@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-15"],
+        "check_indicators": ["email-header-15", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 2,
+        "logo_src": "https://www.clipartmax.com/png/full/39-396725_fakery-logo-fake-company-logo-transparent.png",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain (netf1ix-account-update.com) is not recognized as Netflix's official domain."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "Authentication failures across SPF, DKIM, and DMARC are serious red flags."
+          },
+          {
+            "component": "links",
+            "explanation": "The provided URLs do not match what you'd expect from an official Netflix communication."
+          },
+          {
+            "component": "overall",
+            "explanation": "If Netflix needed to update payment info, they wouldn't use such an odd domain—this email is a scam attempt!"
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Exciting Scholarship Opportunity for Outstanding Students!",
+          "body": "Congratulations! You have been shortlisted for the Singapore Education Trust Scholarship. Complete your application to secure a full tuition waiver for your upcoming studies.",
+          "paragraphs": [
+            "This opportunity is open exclusively to top-performing students. Verify your details and submit your application before the deadline.",
+            "Failure to apply in time may result in the loss of this once-in-a-lifetime opportunity."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Apply Now", "url": "https://www.s1ngaporeedtrust.sg/apply" },
+            { "id": "content-link-2", "text": "Scholarship Guidelines", "url": "https://www.s1ngaporeedtrust.sg/guidelines" }
+          ],
+          "closing": "Best regards,",
+          "signature": "Singapore Education Trust Team"
+        },
+        "email_header": {
+          "id": "email-header-16",
+          "from": "scholarships@singaporeedtrust.sg",
+          "reply-to": "contact@singaporeedtrust.sg",
+          "to": "student@example.com",
+          "subject": "Exclusive Scholarship Opportunity - Apply Now!",
+          "date": "2025-03-10",
+          "mailed-by": "singaporeedtrust.sg",
+          "signed-by": "singaporeedtrust.sg",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "student@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2"],
+        "check_indicators": ["email-header-16", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 1,
+        "logo_src": "https://logo.clearbit.com/singaporeedtrust.sg",
+        "explanations": [
+          {
+            "component": "email_auth",
+            "explanation": "Authentication tests passed, but don’t be fooled—the links use '1' instead of 'l' in the domain."
+          },
+          {
+            "component": "links",
+            "explanation": "The URLs 's1ngaporeedtrust.sg' look fishy—a subtle typo indicating a phishing attempt."
+          },
+          {
+            "component": "overall",
+            "explanation": "Even though the email appears authenticated, the unusual domain spelling should make you double-check before clicking."
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Exciting Internship Opportunity for Aspiring Tech Professionals!",
+          "body": "We are pleased to invite you to apply for an internship at TechCareerSG. This opportunity is designed for passionate individuals looking to gain hands-on experience in the tech industry.",
+          "paragraphs": [
+            "Our internship program offers real-world projects, mentorship from industry experts, and a pathway to a full-time career.",
+            "Apply now to kickstart your career and be part of innovative projects."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Apply for Internship", "url": "https://www.techcareersg.com/internships" },
+            { "id": "content-link-2", "text": "Program Details", "url": "https://www.techcareersg.com/details" }
+          ],
+          "closing": "Best regards,",
+          "signature": "TechCareerSG Recruitment Team"
+        },
+        "email_header": {
+          "id": "email-header-17",
+          "from": "info@techcareersg.com",
+          "reply-to": "recruitment@techcareersg.com",
+          "to": "applicant@example.com",
+          "subject": "Internship Opportunity at TechCareerSG",
+          "date": "2025-03-11",
+          "mailed-by": "techcareersg.com",
+          "signed-by": "techcareersg.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "applicant@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-17", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/techcareersg.com",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's address and domain are consistent with TechCareerSG's official communications."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks passed, ensuring the email is genuine."
+          },
+          {
+            "component": "links",
+            "explanation": "The links direct you to the official TechCareerSG website, so you can apply safely."
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Important: Your OCBC Account Update Required!",
+          "body": "Due to recent security updates, we require all customers to verify their account information. Please update your details to continue uninterrupted access.",
+          "paragraphs": [
+            "This update is mandatory to protect your account from potential unauthorized transactions.",
+            "Failure to update your information may result in temporary account suspension."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Update Account Information", "url": "https://www.ocbck-secure.com/update" },
+            { "id": "content-link-2", "text": "Learn More", "url": "https://www.ocbck-secure.com/info" }
+          ],
+          "closing": "Sincerely,",
+          "signature": "OCBC Security Team"
+        },
+        "email_header": {
+          "id": "email-header-18",
+          "from": "update@ocbck-secure.com",
+          "reply-to": "support@ocbc.com.sg",
+          "to": "customer@example.com",
+          "subject": "⚠️ OCBC Account Update Required",
+          "date": "2025-03-12",
+          "mailed-by": "ocbck-secure.com",
+          "signed-by": "ocbck-secure.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "customer@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2"],
+        "check_indicators": ["email-header-18", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 1,
+        "logo_src": "https://logo.clearbit.com/ocbc.com.sg",
+        "explanations": [
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks passed—but the sender’s domain ('ocbck-secure.com') is a subtle misspelling of OCBC."
+          },
+          {
+            "component": "links",
+            "explanation": "The links use 'ocbck-secure.com', which is slightly off; watch out for such typosquatting tactics."
+          },
+          {
+            "component": "overall",
+            "explanation": "Despite passing authentication, the unusual domain suggests this email is a phishing attempt."
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Join Our GovTech Digital Skills Workshop",
+          "body": "Enhance your digital skills with our upcoming workshop designed for working professionals. Learn about the latest tech trends and practical applications in the public sector.",
+          "paragraphs": [
+            "This workshop is a great opportunity to upgrade your skills and network with industry leaders.",
+            "Seats are limited, so register early to secure your spot."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Register Now", "url": "https://www.govtech.sg/workshop/register" },
+            { "id": "content-link-2", "text": "Workshop Details", "url": "https://www.govtech.sg/workshop/details" }
+          ],
+          "closing": "Warm regards,",
+          "signature": "GovTech Digital Skills Team"
+        },
+        "email_header": {
+          "id": "email-header-19",
+          "from": "workshops@govtech.sg",
+          "reply-to": "support@govtech.sg",
+          "to": "professional@example.com",
+          "subject": "Enhance Your Digital Skills with GovTech",
+          "date": "2025-03-13",
+          "mailed-by": "govtech.sg",
+          "signed-by": "govtech.sg",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "professional@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-19", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/govtech.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's email and domain are official and clearly associated with GovTech."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks have passed, verifying the email’s legitimacy."
+          },
+          {
+            "component": "links",
+            "explanation": "The links lead to the official GovTech website, ensuring a safe registration process."
+          },
+          {
+            "component": "content",
+            "explanation": "The workshop details and professional tone are consistent with GovTech communications."
+          }
+        ]
+      },
+      {
+        "is_scam": true,
+        "email_content": {
+          "greeting": "Exclusive Bonus for Grab Drivers!",
+          "body": "Congratulations! You've been selected to receive an exclusive bonus for your excellent performance. Please verify your account to claim your bonus.",
+          "paragraphs": [
+            "This bonus is available for a limited time only. Ensure your account details are updated to receive your reward.",
+            "Failure to verify may result in your bonus being forfeited."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Verify Your Account", "url": "http://gr4b-bonus.com/verify" },
+            { "id": "content-link-2", "text": "Bonus Details", "url": "http://gr4b-bonus.com/details" }
+          ],
+          "closing": "Best regards,",
+          "signature": "Grab Support Team"
+        },
+        "email_header": {
+          "id": "email-header-20",
+          "from": "bonus@gr4b-supp0rt.com",
+          "reply-to": "support@grab.com.sg",
+          "to": "driver@example.com",
+          "subject": "⚠️ Action Required: Claim Your Exclusive Bonus",
+          "date": "2025-03-14",
+          "mailed-by": "gr4b-supp0rt.com",
+          "signed-by": "gr4b-supp0rt.com",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "FAIL",
+          "DKIM": "FAIL",
+          "DMARC": "FAIL"
+        },
+        "persona": "driver@example.com",
+        "scam_indicators": ["content-link-1", "content-link-2", "email-header-20"],
+        "check_indicators": ["email-header-20", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 1,
+        "logo_src": "https://logo.clearbit.com/grab.com.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's domain ('gr4b-supp0rt.com') is suspicious and doesn't match Grab's official domain."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "Authentication checks have failed, indicating this is a phishing attempt."
+          },
+          {
+            "component": "links",
+            "explanation": "The links use unusual substitutions (e.g. 'gr4b' instead of 'grab'), a common phishing tactic."
+          },
+          {
+            "component": "overall",
+            "explanation": "Despite the promise of a bonus, these red flags indicate this email is a scam. Avoid clicking!"
+          }
+        ]
+      },
+      {
+        "is_scam": false,
+        "email_content": {
+          "greeting": "Important: Exam Registration Now Open!",
+          "body": "Dear Student, exam registration for the upcoming semester is now open. Please follow the link below to complete your registration.",
+          "paragraphs": [
+            "Ensure that you register before the deadline to secure your spot in your desired courses.",
+            "If you have any questions, our support team is available to assist you."
+          ],
+          "links": [
+            { "id": "content-link-1", "text": "Register for Exams", "url": "https://www.studenthub.sg/exam-registration" },
+            { "id": "content-link-2", "text": "Registration Guidelines", "url": "https://www.studenthub.sg/guidelines" }
+          ],
+          "closing": "Best regards,",
+          "signature": "StudentHub SG Team"
+        },
+        "email_header": {
+          "id": "email-header-21",
+          "from": "noreply@studenthub.sg",
+          "reply-to": "support@studenthub.sg",
+          "to": "student@example.com",
+          "subject": "Exam Registration Now Open - Secure Your Spot!",
+          "date": "2025-03-15",
+          "mailed-by": "studenthub.sg",
+          "signed-by": "studenthub.sg",
+          "security": "TLS encryption enabled"
+        },
+        "email_auth": {
+          "SPF": "PASS",
+          "DKIM": "PASS",
+          "DMARC": "PASS"
+        },
+        "persona": "student@example.com",
+        "scam_indicators": [],
+        "check_indicators": ["email-header-21", "content-link-1", "content-link-2"],
+        "is_user_created": false,
+        "average_rating": 4,
+        "logo_src": "https://logo.clearbit.com/studenthub.sg",
+        "explanations": [
+          {
+            "component": "email_header",
+            "explanation": "The sender's email and domain (studenthub.sg) are official and trustworthy."
+          },
+          {
+            "component": "email_auth",
+            "explanation": "All authentication checks have passed, confirming the email's legitimacy."
+          },
+          {
+            "component": "links",
+            "explanation": "The links direct you to the official StudentHub SG website for exam registration."
+          },
+          {
+            "component": "content",
+            "explanation": "Clear instructions and detailed guidelines ensure this is a genuine communication."
+          }
+        ]
+      }
+]

@@ -1,0 +1,104 @@
+{
+    "scoring_system": {
+      "0": {
+        "correct_answers": 0,
+        "bonus_xp": 0,
+        "total_xp": 0,
+        "title": "Scam Victim in Training",
+        "compliments": [
+          "Oops! Scammers would love you. Keep practicing!",
+          "You might want to double-check those emails next time!"
+        ]
+      },
+      "10": {
+        "correct_answers": 1,
+        "bonus_xp": 0,
+        "total_xp": 10,
+        "title": "Suspicious Observer",
+        "compliments": [
+          "A start! But those scams still got past you…",
+          "At least you got one! Time to level up!"
+        ]
+      },
+      "20": {
+        "correct_answers": 2,
+        "bonus_xp": 5,
+        "total_xp": 25,
+        "title": "Cautious Clicker",
+        "compliments": [
+          "You're onto them, but still a bit too trusting!",
+          "Some scams still slipped through, but you're improving!"
+        ]
+      },
+      "30": {
+        "correct_answers": 3,
+        "bonus_xp": 10,
+        "total_xp": 40,
+        "title": "Fraud Detective",
+        "compliments": [
+          "Great job! You’ve got a sharp eye for scams!",
+          "You're catching them, but can you get them all?"
+        ]
+      },
+      "40": {
+        "correct_answers": 4,
+        "bonus_xp": 15,
+        "total_xp": 55,
+        "title": "Cyber Sleuth",
+        "compliments": [
+          "Almost flawless! Scammers beware!",
+          "You're just one step away from perfection!"
+        ]
+      },
+      "50": {
+        "correct_answers": 5,
+        "bonus_xp": 25,
+        "total_xp": 75,
+        "title": "Scam Slayer Supreme",
+        "compliments": [
+          "100% accuracy! Even con artists fear you!",
+          "Are you part of the FBI?!"
+        ]
+      }
+    },
+    "time_scoring": {
+      "180": {
+        "bonus_xp": 20,
+        "title": "Speed Demon",
+        "compliments": [
+          "Lightning fast! Were you born for this?",
+          "Are you a human scam detector?!"
+        ]
+      },
+      "360": {
+        "bonus_xp": 10,
+        "title": "Quick Thinker",
+        "compliments": [
+          "Swift and sharp! Keep up the great work!",
+          "You're catching scams at a solid pace!"
+        ]
+      },
+      "720": {
+        "bonus_xp": 5,
+        "title": "Careful Analyst",
+        "compliments": [
+          "Taking your time to be sure—respectable!",
+          "You're playing it safe, and that’s smart!"
+        ]
+      },
+      "others": {
+        "bonus_xp": 0,
+        "title": "Thorough Investigator",
+        "compliments": [
+          "A meticulous approach! Scammers won't fool you easily.",
+          "Slow and steady wins the race!"
+        ]
+      }
+    },
+    "streak_bonus": {
+      "description": "If a user gets 5/5 two times in a row, they earn the 'Scam Sniper' badge.",
+      "streak_title": "Scam Sniper",
+      "streak_xp_bonus": 20
+    }
+  }
+  

@@ -1,0 +1,478 @@
+/* General table styling */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.scamSpotter{
+  background-color: #1A1B2E;
+  color:#E0E0E0;
+}
+
+.emailAuth {
+  position: relative; /* Ensures absolute positioning works inside */
+  width: 250px; /* Set a fixed width */
+}
+
+.authHeader {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Button takes auto width, text takes remaining space */
+  align-items: center; /* Center-align items vertically */
+  gap: 8px; /* Space between button and text */
+}
+
+/* Use flexbox for a more stable layout */
+.personaHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Fix the width and height of the text container to prevent reflow */
+.personaDetail {
+  font-size: 16px;
+  font-weight: normal;
+  width: 150px;    /* Adjust width to suit your text */
+  height: 40px;    /* Fixed height for two lines */
+  line-height: 20px;  /* Consistent line height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Toggle bold without changing the overall size */
+.personaDetail.bold {
+  font-weight: bold;
+}
+
+
+.detailBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+.authIcon {
+  width: 24px;
+  height: 24px;
+}
+
+
+.authStatus, .personDetail {
+  font-size: 16px;
+  font-weight: normal; /* Default to normal weight */
+}
+
+.authStatus.bold {
+  font-weight: bold; /* Bold when the button is clicked */
+}
+
+.table-container {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.personaDetail.bold{
+  font-weight:bold;
+}
+
+.emailData th,
+.emailData td {
+  padding: 8px;
+  border-bottom: 1px solid #444; /* Darker borders */
+  color: #E0E0E0; /* Light text color */
+}
+
+.emailData th {
+  background-color: #2a2a3b; /* Dark header background */
+}
+
+.emailData td {
+  background-color: #1a1b2e; /* Dark table cells */
+}
+
+
+  
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+  .emailData th, .emailData td {
+    padding: 10px 12px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Reduce font size for better readability */
+  }
+
+  /* Stack table headers on small screens */
+  .emailData th {
+    width: auto; /* Allow header width to adjust based on content */
+  }
+}
+  
+
+.scamSpotter{
+    padding:30px 40px;
+}
+
+.scamSpotterMode{
+    font-weight: 300;
+}
+
+.scamSpotterInstruction{
+    font-weight: 300;
+}
+
+
+/* Toggle button styles */
+.toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Style for the label (Inspect/Select) */
+  .buttonLabel {
+    text-align: center; /* Horizontally center the label */
+    margin-bottom: 8px; /* Space between the label and button */
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+/* Toggle button styles */
+.toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  /* Style for the label (Inspect/Select) */
+  .buttonLabel {
+    text-align: center; /* Horizontally center the label */
+    margin-bottom: 8px; /* Space between the label and button */
+    font-size: 14px;
+    font-weight: normal; /* Default font weight */
+  }
+  
+  /* Active label for the selected button */
+  .buttonLabel.activeLabel {
+    font-weight: bold; /* Bold the label for the active button */
+  }
+  
+  /* Toggle button styles */
+  .toggleBtn {
+    display: flex; /* Enable flexbox for centering content */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    width: 80px; /* Set the width of the button (adjust as needed) */
+    height: 80px; /* Set the height of the button (adjust as needed) */
+    border-radius: 50%; /* Make the button circular */
+    background-color: #616161; /* Retain the background color */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to indicate button is clickable */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for background color and scale */
+  }
+
+  
+  .toggleBtn img {
+    width: 50%; /* Make the image take up 50% of the button's width */
+    height: 50%; /* Make the image take up 50% of the button's height */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+  }
+  
+  /* Active state for the button */
+  .toggleBtn.active {
+    background-color: #00FF00; /* Stronger green when active */
+    transform: scale(1); /* Keep active button at normal size */
+  }
+  
+  /* Inactive button should be smaller */
+  .toggleBtn:not(.active) {
+    transform: scale(0.8); /* Scale down the inactive button */
+  }
+  
+  .toggleBtn:hover {
+    background-color: #76e076; /* Darker green on hover */
+  }
+  
+  .toggleBtn:active {
+    background-color: #98e698; /* Slightly darker green when clicked */
+  }
+  
+/* More email details style */
+.detailBtn {
+    display: flex; /* Enable flexbox for centering content */
+    justify-content: center; /* Horizontally center the content */
+    align-items: center; /* Vertically center the content */
+    width: 60px; /* Set the width of the button (adjust as needed) */
+    height: 60px; /* Set the height of the button (adjust as needed) */
+    border-radius: 50%; /* Make the button circular */
+    background-color: #FFEB3B; /* Set the background color */
+    cursor: pointer; /* Change cursor to indicate button is clickable */
+    border: none;
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.detailBtn.clicked {
+    background-color: #b0b0b0; /* Gray out the button when clicked */
+}
+
+.detailBtn img {
+    width: 60%; /* Make the image take up 60% of the button's width */
+    height: 60%; /* Make the image take up 60% of the button's height */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+/* ========== START: EMAIL TEMPLATE STYLES ========= */
+/* Container */
+.email-container {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  color: #E0E0E0}
+
+/* Email Box */
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 5px 0 rgba(0, 255, 0, 0.8), 0 0 10px 0 rgba(0, 255, 0, 0.8), 0 0 20px 0 rgba(0, 255, 0, 0.8);
+  }
+  25% {
+    box-shadow: 0 0 5px 5px rgba(0, 255, 0, 0.7), 0 0 10px 10px rgba(0, 255, 0, 0.6), 0 0 20px 15px rgba(0, 255, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 5px 10px rgba(0, 255, 0, 0.4), 0 0 10px 15px rgba(0, 255, 0, 0.4), 0 0 20px 20px rgba(0, 255, 0, 0.3);
+  }
+  75% {
+    box-shadow: 0 0 5px 15px rgba(0, 255, 0, 0.8), 0 0 10px 20px rgba(0, 255, 0, 0.7), 0 0 20px 25px rgba(0, 255, 0, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 5px 0 rgba(0, 255, 0, 0.8), 0 0 10px 0 rgba(0, 255, 0, 0.8), 0 0 20px 0 rgba(0, 255, 0, 0.8);
+  }
+}
+
+.email-box {
+  position: relative;
+  padding: 20px;
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  background-color: #333333;  /* Dark background for contrast */
+  color: #E0E0E0;
+  animation: neonGlow 5.5s ease-in-out infinite;
+  box-sizing: border-box;
+}
+
+
+/* Email Subject Section */
+.email-subject {
+  font-family: Arial, sans-serif;
+  padding: 15px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #444; /* Darker border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a3b; /* Dark background */
+  color: #E0E0E0; /* Light text color */
+}
+
+/* Metadata Section */
+.email-metadata {
+  font-family: Arial, sans-serif;
+  padding: 15px 20px;
+  font-size: 14px;
+  background-color: #2a2a3b; /* Dark background */
+  border-bottom: 1px solid #444; /* Darker border */
+  color: #E0E0E0; /* Light text color */
+}
+
+/* Metadata Toggle Button */
+.metadata-toggle {
+  cursor: pointer;
+  font-size: 18px;
+  color: #76e076; /* Neon green color */
+  transition: transform 0.2s;
+}
+
+.metadata-toggle.rotated {
+  transform: rotate(180deg);
+}
+
+
+/* Logo */
+.email-logo {
+  display: block;
+  width: 200px;
+}
+
+/* Email Content */
+.email-content {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  color: #E0E0E0; /* Change to a light color for better contrast */
+}
+
+.email-content h1 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  color: #E0E0E0; /* Make sure the heading is also light */
+}
+
+.email-content p,
+.email-content ul {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px;
+  color: #E0E0E0; /* Consistent text color */
+}
+
+
+/* Call-to-Action Buttons */
+.cta-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #1a73e8;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+/* Footer */
+.email-footer {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #E0E0E0; /* Light text */
+  text-align: center;
+  padding: 20px;
+  /* background-color: #2a2a3b; /* Dark background */
+} */
+
+.email-footer a {
+  color: #76e076; /* Neon green color for links */
+}
+
+/* ========= END:  EMAIL TEMPLATE STYLES =========*/
+
+/* Highlight selected rows */
+.correct {
+  background-color: darkgreen !important;
+  color: white; /* For readability */
+}
+
+.incorrect {
+  background-color: darkred !important;
+  color: white; /* For readability */
+}
+
+
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .emailData th, .emailData td {
+    padding: 8px 10px;
+  }
+}
+
+/* Cyberpunk-themed modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+}
+
+/* Cyberpunk-themed modal content */
+.modal-content {
+  background-color: #1a1a1d; /* dark background */
+  border: 2px solid #c3073f; /* neon red accent */
+  border-radius: 10px;
+  max-width: 450px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(195, 7, 63, 0.8); /* neon glow */
+  color: #fff;
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
+}
+
+/* Header styling with neon accent */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c3073f;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+/* Body styling */
+.modal-body {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer styling */
+.modal-footer {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  border-top: 1px solid #c3073f;
+  padding-top: 10px;
+}
+
+/* Close button styling */
+.close-button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #c3073f;
+  cursor: pointer;
+}
+
+/* Custom tooltip (for learning) */
+.learning-tooltip {
+  position: absolute;
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid #00a8ff;  /* neon blue */
+  border-radius: 8px;
+  padding: 15px;
+  max-width: 300px;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  box-shadow: 0 0 15px #00a8ff;
+  z-index: 1100;
+}
+
+.learning-tooltip h5 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #00a8ff;
+}
+
+.learning-tooltip p {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+.scam-indicator {
+  background-color: rgba(255, 0, 0, 0.3); /* Light red */
+  border: 2px solid red;
+}
+
+.safe-indicator {
+  background-color: rgba(0, 255, 0, 0.3); /* Light green */
+  border: 2px solid green;
+}

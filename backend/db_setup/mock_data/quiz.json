@@ -1,0 +1,1407 @@
+[
+    {
+            "createdByUserId": 1,
+            "isUserCreated": false,
+            "createdDate": "2025-01-25",
+            "topic": "Protecting Personal Information",
+            "subtopic": "Password Security",
+            "difficulty": "Beginner",
+            "quizName": "Rank passwords from weakest to strongest",
+            "questions": [
+                {
+                    "questionId": 1,
+                    "question": "Which of the following passwords is the weakest?",
+                    "choices": {
+                        "a": "password123",
+                        "b": "P@ssw0rd!2025",
+                        "c": "abcd",
+                        "d": "aV3rY_Str0ng_P@ss!"
+                    },
+                    "correctAnswer": "c",
+                    "hint": "Short passwords with no complexity are usually weaker.",
+                    "correctFeedback": "Correct! 'abcd' is a very weak password because it is short and lacks complexity.",
+                    "wrongFeedback": "Incorrect. Consider factors like length, complexity, and unpredictability."
+                },
+                {
+                    "questionId": 2,
+                    "question": "What makes a password strong?",
+                    "choices": {
+                        "a": "A mix of upper and lowercase letters, numbers, and symbols",
+                        "b": "Using only letters",
+                        "c": "Including your name or birth year",
+                        "d": "Keeping it very short"
+                    },
+                    "correctAnswer": "a",
+                    "hint": "Strong passwords are complex and hard to guess.",
+                    "correctFeedback": "Correct! A strong password includes a mix of different character types.",
+                    "wrongFeedback": "Incorrect. Strong passwords require a mix of letters, numbers, and symbols."
+                },
+                {
+                    "questionId": 3,
+                    "question": "What is a good strategy for creating secure passwords?",
+                    "choices": {
+                        "a": "Use the same password for all accounts",
+                        "b": "Write your passwords down on sticky notes",
+                        "c": "Use a password manager to store and generate complex passwords",
+                        "d": "Share your passwords with friends and family"
+                    },
+                    "correctAnswer": "c",
+                    "hint": "Password managers help create and store secure passwords.",
+                    "correctFeedback": "Correct! Password managers are a great tool for managing secure passwords.",
+                    "wrongFeedback": "Incorrect. Password managers offer a secure way to store and generate passwords."
+                },
+                {
+                    "questionId": 4,
+                    "question": "How often should you change your passwords?",
+                    "choices": {
+                        "a": "Every 5-10 years",
+                        "b": "Only when you suspect a security breach",
+                        "c": "Every 6-12 months or after a security incident",
+                        "d": "Never, if you have a strong password"
+                    },
+                    "correctAnswer": "c",
+                    "hint": "Regular updates can help maintain security.",
+                    "correctFeedback": "Correct! Regular password changes can enhance security.",
+                    "wrongFeedback": "Incorrect. Periodic updates are important for maintaining security."
+                }
+            ],
+            "status": "accepted",
+            "hasBeenAttempted": false,
+            "hasBeenRated": false,
+            "averageRating": 0,
+            "totalAttempts": 0,
+            "xp": 25
+            
+        },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-01-25",
+        "topic": "Protecting Personal Information",
+        "subtopic": "Password Security",
+        "difficulty": "Intermediate",
+        "quizName": "Identify the best practices for creating secure passwords",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "Which of these is a best practice for creating a secure password?",
+                "choices": {
+                    "a": "Use your favorite sports team as your password",
+                    "b": "Include a mix of uppercase and lowercase letters, numbers, and symbols",
+                    "c": "Reuse your passwords across multiple accounts",
+                    "d": "Use your birthdate as part of your password"
+                },
+                "correctAnswer": "b",
+                "hint": "Consider complexity and unpredictability.",
+                "correctFeedback": "Correct! Mixing character types makes passwords stronger.",
+                "wrongFeedback": "Incorrect. A secure password needs to be complex and hard to guess."
+            },
+            {
+                "questionId": 2,
+                "question": "How often should you change your passwords?",
+                "choices": {
+                    "a": "Only when you forget it",
+                    "b": "Every 6-12 months or after a security breach",
+                    "c": "Never",
+                    "d": "Every day"
+                },
+                "correctAnswer": "b",
+                "hint": "Frequent updates are key to security.",
+                "correctFeedback": "Correct! Regular password changes enhance security.",
+                "wrongFeedback": "Incorrect. Passwords should be updated periodically."
+            },
+            {
+                "questionId": 3,
+                "question": "What is the benefit of using a passphrase instead of a password?",
+                "choices": {
+                    "a": "Passphrases are easier to remember",
+                    "b": "Passphrases are less secure than passwords",
+                    "c": "Passphrases are shorter",
+                    "d": "Passphrases are longer and more complex"
+                },
+                "correctAnswer": "d",
+                "hint": "Passphrases can be longer and more secure.",
+                "correctFeedback": "Correct! Passphrases offer increased security due to their length and complexity.",
+                "wrongFeedback": "Incorrect. Passphrases can be more secure than traditional passwords."
+            },
+            {
+                "questionId": 4,
+                "question": "What should you do if you suspect your password has been compromised?",
+                "choices": {
+                    "a": "Continue using the same password",
+                    "b": "Change the password for the affected account and any others that share it",
+                    "c": "Share the password with friends to get their opinion",
+                    "d": "Ignore the suspicion and carry on as usual"
+                },
+                "correctAnswer": "b",
+                "hint": "Act quickly to protect your accounts.",
+                "correctFeedback": "Correct! Changing compromised passwords is essential for security.",
+                "wrongFeedback": "Incorrect. Suspected compromises should be addressed promptly."
+            }
+            ],
+            "status": "accepted",
+            "hasBeenAttempted": false,
+            "hasBeenRated": false,
+            "averageRating": 0,
+            "totalAttempts": 0,
+            "xp": 50
+            
+        },
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Protecting Personal Information",
+    "subtopic": "Two-Factor Authentication (2FA)",
+    "difficulty": "Intermediate",
+    "quizName": "Choose the most secure 2FA method in different scenarios",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "Which 2FA method provides the highest level of security?",
+            "choices": {
+                "a": "Text message (SMS) codes",
+                "b": "Authenticator apps like Google Authenticator",
+                "c": "Email verification codes",
+                "d": "Security questions"
+            },
+            "correctAnswer": "b",
+            "hint": "Consider the risk of interception.",
+            "correctFeedback": "Correct! Authenticator apps are more secure than SMS or email.",
+            "wrongFeedback": "Incorrect. Authenticator apps are less prone to interception."
+        },
+        {
+            "questionId": 2,
+            "question": "What is an advantage of using physical security keys for 2FA?",
+            "choices": {
+                "a": "They cannot be phished or intercepted",
+                "b": "They are always free",
+                "c": "They work without any setup",
+                "d": "They are unnecessary if you have a strong password"
+            },
+            "correctAnswer": "a",
+            "hint": "Physical keys provide hardware-level security.",
+            "correctFeedback": "Correct! Physical security keys are resistant to phishing.",
+            "wrongFeedback": "Incorrect. Physical keys are very secure because they cannot be intercepted."
+        },
+        {
+            "questionId": 3,
+            "question": "When should you use biometric authentication for 2FA?",
+            "choices": {
+                "a": "Only when you have a compatible device",
+                "b": "As the primary method for all accounts",
+                "c": "In addition to another authentication factor",
+                "d": "When you want to simplify the login process"
+            },
+            "correctAnswer": "c",
+            "hint": "Biometrics can enhance security but are best used with another factor.",
+            "correctFeedback": "Correct! Biometrics are most effective when combined with another authentication method.",
+            "wrongFeedback": "Incorrect. Biometrics are best used as an additional layer of security."
+        },
+        {
+            "questionId": 4,
+            "question": "What is a potential drawback of using SMS codes for 2FA?",
+            "choices": {
+                "a": "They are more secure than other methods",
+                "b": "They can be intercepted or redirected by attackers",
+                "c": "They work without a cellular connection",
+                "d": "They are easier to remember than other codes"
+            },
+            "correctAnswer": "b",
+            "hint": "SMS codes can be vulnerable to interception.",
+            "correctFeedback": "Correct! SMS codes can be intercepted or redirected by attackers.",
+            "wrongFeedback": "Incorrect. SMS codes have security risks due to interception."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Protecting Personal Information",
+    "subtopic": "Two-Factor Authentication (2FA)",
+    "difficulty": "Advanced",
+    "quizName": "Identify which messages are genuine 2FA requests",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "You receive an unexpected 2FA code request. What should you do?",
+            "choices": {
+                "a": "Enter the code immediately",
+                "b": "Ignore it and change your password",
+                "c": "Click any included link to validate",
+                "d": "Share the code with the sender"
+            },
+            "correctAnswer": "b",
+            "hint": "Unrequested codes might indicate a phishing attempt.",
+            "correctFeedback": "Correct! Change your password to secure your account.",
+            "wrongFeedback": "Incorrect. Never enter or share unrequested codes."
+        },
+        {
+            "questionId": 2,
+            "question": "Which of these is a sign of a fake 2FA request?",
+            "choices": {
+                "a": "Generic greeting like 'Dear User'",
+                "b": "Specific details about your account",
+                "c": "A legitimate company logo",
+                "d": "Personalized security advice"
+            },
+            "correctAnswer": "a",
+            "hint": "Phishing messages often lack personalization.",
+            "correctFeedback": "Correct! Generic greetings indicate phishing attempts.",
+            "wrongFeedback": "Incorrect. Look for personalization to spot genuine messages."
+        },
+        {
+            "questionId": 3,
+            "question": "What should you do if you receive a suspicious 2FA request?",
+            "choices": {
+                "a": "Enter the code to verify your account",
+                "b": "Report the message as phishing and delete it",
+                "c": "Share the code with friends to see if they received it too",
+                "d": "Click on any links to investigate further"
+            },
+            "correctAnswer": "b",
+            "hint": "Report suspicious messages to protect yourself and others.",
+            "correctFeedback": "Correct! Reporting phishing messages helps prevent scams.",
+            "wrongFeedback": "Incorrect. Never engage with suspicious messages."
+        },
+        {
+            "questionId": 4,
+            "question": "What is a common tactic used in 2FA phishing attempts?",
+            "choices": {
+                "a": "Urgent requests for immediate action",
+                "b": "Detailed account information",
+                "c": "Personalized greetings with your name",
+                "d": "Official company logos and branding"
+            },
+            "correctAnswer": "a",
+            "hint": "Phishing messages often create a sense of urgency.",
+            "correctFeedback": "Correct! Urgent requests are a common tactic in phishing.",
+            "wrongFeedback": "Incorrect. Urgency can be a red flag for phishing attempts"
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 75
+    
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Secure Internet Browsing",
+    "subtopic": "Browser Security",
+    "difficulty": "Beginner",
+    "quizName": "Identify the signs of a fake browser extension",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "Which of the following is a sign of a fake browser extension?",
+            "choices": {
+                "a": "Requests excessive permissions, such as access to all your data on websites",
+                "b": "Asks for minimal permissions, like access to bookmarks only",
+                "c": "Offers additional features without asking for any permissions",
+                "d": "Is listed on the official browser extension store"
+            },
+            "correctAnswer": "a",
+            "hint": "Extensions that request unnecessary permissions could be malicious.",
+            "correctFeedback": "Correct! Fake extensions often ask for excessive permissions.",
+            "wrongFeedback": "Incorrect. Malicious extensions typically ask for more permissions than necessary."
+        },
+        {
+            "questionId": 2,
+            "question": "What should you do if you suspect a browser extension is fake?",
+            "choices": {
+                "a": "Uninstall the extension and report it to the browser's extension store",
+                "b": "Ignore it and continue using the browser",
+                "c": "Try to fix it by modifying the extension's settings",
+                "d": "Click on all the buttons to see what happens"
+            },
+            "correctAnswer": "a",
+            "hint": "Report suspicious extensions to help protect others.",
+            "correctFeedback": "Correct! Uninstalling and reporting a fake extension is the best action.",
+            "wrongFeedback": "Incorrect. It's important to remove and report fake extensions."
+        },
+        {
+            "questionId": 3,
+            "question": "What is a potential risk of using a fake browser extension?",
+            "choices": {
+                "a": "Improved browsing experience and enhanced security",
+                "b": "Data theft, unauthorized access, and malicious activities",
+                "c": "Better performance and faster internet speeds",
+                "d": "Enhanced privacy and protection from online threats"
+            },
+            "correctAnswer": "b",
+            "hint": "Fake extensions can compromise your data and online security.",
+            "correctFeedback": "Correct! Fake extensions can lead to data theft and other malicious activities.",
+            "wrongFeedback": "Incorrect. Fake extensions pose significant risks to your online security."
+        },
+        {
+            "questionId": 4,
+            "question": "How can you verify the authenticity of a browser extension?",
+            "choices": {
+                "a": "Check the extension's reviews and ratings",
+                "b": "Install any extension that looks interesting",
+                "c": "Ignore reviews and install based on the extension's description",
+                "d": "Share the extension with friends to get their opinion"
+            },
+            "correctAnswer": "a",
+            "hint": "Reviews and ratings can provide insights into an extension's trustworthiness.",
+            "correctFeedback": "Correct! Checking reviews and ratings can help verify an extension's authenticity.",
+            "wrongFeedback": "Incorrect. Reviews and ratings are valuable indicators of an extension's reliability."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 25
+    
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Secure Internet Browsing",
+    "subtopic": "Browser Security",
+    "difficulty": "Intermediate",
+    "quizName": "Recognize the signs of a fake browser update",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "What is a common indicator of a fake browser update?",
+            "choices": {
+                "a": "A pop-up that appears while browsing and urges you to update immediately",
+                "b": "A notification from your browser's built-in update system",
+                "c": "A quiet update running in the background without your knowledge",
+                "d": "A browser update available directly from the browser's official settings"
+            },
+            "correctAnswer": "a",
+            "hint": "Fake updates often come as urgent pop-ups to create a sense of urgency.",
+            "correctFeedback": "Correct! Fake updates usually appear as unsolicited pop-ups.",
+            "wrongFeedback": "Incorrect. Pop-up updates are often a sign of phishing attempts."
+        },
+        {
+            "questionId": 2,
+            "question": "What should you do if you receive a suspicious browser update notification?",
+            "choices": {
+                "a": "Click on the update link and run the installation",
+                "b": "Close the pop-up and check for updates through the browser settings",
+                "c": "Try to install it from a third-party website",
+                "d": "Ignore it and continue browsing without any changes"
+            },
+            "correctAnswer": "b",
+            "hint": "Always update your browser directly through the official settings or website.",
+            "correctFeedback": "Correct! Avoid clicking pop-ups and manually check for updates through settings.",
+            "wrongFeedback": "Incorrect. It's important to only update your browser from official channels."
+        },
+        {
+            "questionId": 3,
+            "question": "What is a potential risk of installing a fake browser update?",
+            "choices": {
+                "a": "Enhanced security and new features",
+                "b": "Malware installation, data theft, and security vulnerabilities",
+                "c": "Improved performance and faster browsing speeds",
+                "d": "Protection from online threats and phishing attacks"
+            },
+            "correctAnswer": "b",
+            "hint": "Fake updates can introduce malware and compromise your security.",
+            "correctFeedback": "Correct! Fake updates can lead to malware installation and security risks.",
+            "wrongFeedback": "Incorrect. Fake updates pose significant security threats to your system."
+        },
+        {
+            "questionId": 4,
+            "question": "How can you verify the authenticity of a browser update?",
+            "choices": {
+                "a": "Check for official announcements or release notes on the browser's website",
+                "b": "Install any updates that appear on your screen",
+                "c": "Ignore the update and continue using the browser as is",
+                "d": "Share the update link with friends to get their opinion"
+            },
+            "correctAnswer": "a",
+            "hint": "Official sources provide reliable information on updates.",
+            "correctFeedback": "Correct! Verify updates through official announcements or release notes.",
+            "wrongFeedback": "Incorrect. Always confirm updates through official channels."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+    
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Secure Internet Browsing",
+    "subtopic": "Website Security",
+    "difficulty": "Intermediate",
+    "quizName": "Identify the signs of a fake website",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "Which of the following is a sign of a fake website?",
+            "choices": {
+                "a": "The website uses HTTPS but has a suspicious URL or misspelled domain",
+                "b": "The website is on a secure domain, such as .org or .edu",
+                "c": "The website has clear branding and matches the official website's appearance",
+                "d": "The website has a contact page and privacy policy"
+            },
+            "correctAnswer": "a",
+            "hint": "Check the domain name and look for any inconsistencies with the brand.",
+            "correctFeedback": "Correct! Fake websites often have slightly altered or misspelled URLs.",
+            "wrongFeedback": "Incorrect. Always verify the website's domain name for authenticity."
+        },
+        {
+            "questionId": 2,
+            "question": "What is a potential sign of a fake website's legitimacy?",
+            "choices": {
+                "a": "It offers too-good-to-be-true deals and asks for sensitive personal information",
+                "b": "It uses legitimate logos and official product information but lacks encryption",
+                "c": "It has no contact information or address on the website",
+                "d": "It uses a secure connection (HTTPS) but has an unrecognized certificate issuer"
+            },
+            "correctAnswer": "a",
+            "hint": "Too-good-to-be-true offers often come with hidden risks like data theft.",
+            "correctFeedback": "Correct! Fake websites may offer suspicious deals while asking for sensitive data.",
+            "wrongFeedback": "Incorrect. Fake websites often lure visitors with unbelievable offers and requests for personal data."
+        },
+        {
+            "questionId": 3,
+            "question": "What should you do if you suspect a website is fake?",
+            "choices": {
+                "a": "Enter your personal information to see if the website is legitimate",
+                "b": "Report the website to authorities and avoid sharing any personal data",
+                "c": "Click on all the links to explore the website further",
+                "d": "Ignore the warning signs and proceed with the website"
+            },
+            "correctAnswer": "b",
+            "hint": "Report suspicious websites to protect yourself and others from scams.",
+            "correctFeedback": "Correct! Reporting fake websites helps prevent others from falling for scams.",
+            "wrongFeedback": "Incorrect. It's important to avoid sharing personal information and report suspicious websites."
+        },
+        {
+            "questionId": 4,
+            "question": "What is a common tactic used in phishing websites?",
+            "choices": {
+                "a": "Clear branding and official logos",
+                "b": "Suspicious URLs and misspelled domains",
+                "c": "Secure HTTPS connection with a recognized certificate authority",
+                "d": "Detailed contact information and privacy policy"
+            },
+            "correctAnswer": "b",
+            "hint": "Phishing websites often use deceptive URLs to trick visitors.",
+            "correctFeedback": "Correct! Phishing websites may have suspicious URLs or misspelled domains.",
+            "wrongFeedback": "Incorrect. Look for inconsistencies in URLs to identify phishing websites."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+    
+},
+    {
+    "createdByUserId": 2,
+    "isUserCreated": true,
+    "createdDate": "2025-01-25",
+    "topic": "Secure Internet Browsing",
+    "subtopic": "Website Security",
+    "difficulty": "Advanced",
+    "quizName": "Recognize the signs of a fake website certificate",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "What is a key indicator of a fake website certificate?",
+            "choices": {
+                "a": "The certificate has an unrecognized certificate authority (CA)",
+                "b": "The certificate is issued by a known, reputable certificate authority",
+                "c": "The website uses an extended validation certificate (EV)"
+            },
+            "correctAnswer": "a",
+            "hint": "Certificates issued by unknown CAs are typically not valid.",
+            "correctFeedback": "Correct! Fake certificates often come from untrusted certificate authorities.",
+            "wrongFeedback": "Incorrect. Always check for certificates from reputable and recognized authorities."
+        },
+        {
+            "questionId": 2,
+            "question": "What should you do if you find a website with a suspicious certificate?",
+            "choices": {
+                "a": "Proceed with the website anyway, as certificates are not always accurate",
+                "b": "Check the certificate details to see if it is from a trusted certificate authority",
+                "c": "Ignore the warning and continue browsing",
+                "d": "Try to bypass the certificate warning"
+            },
+            "correctAnswer": "b",
+            "hint": "Always verify the certificate to ensure it’s from a trusted source.",
+            "correctFeedback": "Correct! Verify the certificate details and ensure it is issued by a trusted authority.",
+            "wrongFeedback": "Incorrect. A suspicious certificate should always be investigated."
+        },
+        {
+            "questionId": 3,
+            "question": "What is a potential risk of interacting with a website with a fake certificate?",
+            "choices": {
+                "a": "Enhanced security and protection from online threats",
+                "b": "Data interception, malware installation, and security vulnerabilities",
+                "c": "Improved browsing experience and faster internet speeds",
+                "d": "Protection from phishing attacks and unauthorized access"
+            },
+            "correctAnswer": "b",
+            "hint": "Fake certificates can compromise your data and online security.",
+            "correctFeedback": "Correct! Fake certificates can lead to data interception and other security risks.",
+            "wrongFeedback": "Incorrect. Fake certificates pose significant risks to your online security."
+        },
+        {
+            "questionId": 4,
+            "question": "How can you verify the authenticity of a website certificate?",
+            "choices": {
+                "a": "Check the certificate details and issuer to ensure it is valid",
+                "b": "Ignore certificate warnings and proceed with the website",
+                "c": "Share the certificate with friends to get their opinion",
+                "d": "Install any certificates that appear while browsing"
+            },
+            "correctAnswer": "a",
+            "hint": "Valid certificates come from trusted authorities and have accurate details.",
+            "correctFeedback": "Correct! Always verify certificate details and issuers to ensure authenticity.",
+            "wrongFeedback": "Incorrect. Certificate details should be checked for validity before proceeding."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 75
+    
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Reporting and Recovering from Scams",
+    "subtopic": "Reporting Scams",
+    "difficulty": "Intermediate",
+    "quizName": "Identify the steps to take after falling for a scam",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "What is the first step you should take after realizing you've fallen for a scam?",
+            "choices": {
+                "a": "Ignore it and hope it resolves itself",
+                "b": "Report the scam to your local law enforcement or anti-fraud agency",
+                "c": "Contact the scammer and demand your money back",
+                "d": "Post about the scam on social media"
+            },
+            "correctAnswer": "b",
+            "hint": "The sooner you report the scam, the better the chances of recovery.",
+            "correctFeedback": "Correct! Reporting the scam to authorities is the most important first step.",
+            "wrongFeedback": "Incorrect. Reporting to the proper authorities is essential."
+        },
+        {
+            "questionId": 2,
+            "question": "If you've shared your financial information with a scammer, what should you do immediately?",
+            "choices": {
+                "a": "Cancel your credit card or freeze your bank account",
+                "b": "Continue using your financial accounts as usual",
+                "c": "Wait to see if the scammer uses your information",
+                "d": "Change your email password"
+            },
+            "correctAnswer": "a",
+            "hint": "Prevent further unauthorized transactions by taking action quickly.",
+            "correctFeedback": "Correct! Canceling or freezing your accounts can s,top unauthorized transactions.",
+            "wrongFeedback": "Incorrect. Immediate action is required to secure your financial accounts."
+        },
+        {
+            "questionId": 3,
+            "question": "What should you do if you've shared personal information like your Social Security number with a scammer?",
+            "choices": {
+                "a": "Monitor your credit report and consider a credit freeze",
+                "b": "Share the scammer's information with friends and family",
+                "c": "Continue using your personal information as usual",
+                "d": "Post about the scam on social media"
+            },
+            "correctAnswer": "a",
+            "hint": "Protect your identity by monitoring your credit and taking preventive measures.",
+            "correctFeedback": "Correct! Monitoring your credit and considering a credit freeze can protect your identity.",
+            "wrongFeedback": "Incorrect. Safeguarding your personal information is crucial after a scam."
+        },
+        {
+            "questionId": 4,
+            "question": "What is a common tactic used by scammers to pressure victims into acting quickly?",
+            "choices": {
+                "a": "Offering a guaranteed refund or prize",
+                "b": "Creating a sense of urgency or fear",
+                "c": "Providing detailed information and explanations",
+                "d": "Promising long-term benefits or rewards"
+            },
+            "correctAnswer": "b",
+            "hint": "Scammers often use urgency or fear to manipulate victims.",
+            "correctFeedback": "Correct! Urgency and fear tactics are common in scam attempts.",
+            "wrongFeedback": "Incorrect. Be cautious of pressure tactics used by scammers."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+
+},
+    {   
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Reporting and Recovering from Scams",
+    "subtopic": "Reporting Scams",
+    "difficulty": "Intermediate",
+    "quizName": "Recognize the signs of a scam reporting website",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "Which of the following is a trustworthy characteristic of a scam reporting website?",
+            "choices": {
+                "a": "The website has a secure HTTPS connection and is linked from government or official resources",
+                "b": "The website asks for sensitive personal information like passwords",
+                "c": "The website is hosted on a free domain with numerous advertisements",
+                "d": "The website guarantees they will recover your money immediately"
+            },
+            "correctAnswer": "a",
+            "hint": "Trustworthy websites typically have secure connections and affiliations with official organizations.",
+            "correctFeedback": "Correct! Trustworthy scam reporting websites use HTTPS and are connected to official agencies.",
+            "wrongFeedback": "Incorrect. Look for secure connections and official affiliations."
+        },
+        {
+            "questionId": 2,
+            "question": "How can you verify the legitimacy of a scam reporting website?",
+            "choices": {
+                "a": "Check for reviews or endorsements from recognized organizations",
+                "b": "Trust it if it promises to recover your money quickly",
+                "c": "Ignore warnings from your browser about insecure connections",
+                "d": "Provide your credit card details to test their services"
+            },
+            "correctAnswer": "a",
+            "hint": "Legitimate websites often have reviews or endorsements from trusted sources.",
+            "correctFeedback": "Correct! Verifying through reviews or endorsements is a good practice.",
+            "wrongFeedback": "Incorrect. Be cautious with websites that seem too good to be true."
+        },
+        {
+            "questionId": 3,
+            "question": "What is a red flag for a scam reporting website?",
+            "choices": {
+                "a": "The website asks for upfront payment before providing any services",
+                "b": "The website offers free resources and advice on avoiding scams",
+                "c": "The website has a clear privacy policy and contact information",
+                "d": "The website is recommended by a trusted friend"
+            },
+            "correctAnswer": "a",
+            "hint": "Be cautious of websites that ask for payment before offering services.",
+            "correctFeedback": "Correct! Scam reporting websites should not ask for upfront payment.",
+            "wrongFeedback": "Incorrect. Avoid websites that request payment before providing assistance."
+        },
+        {
+            "questionId": 4,
+            "question": "What should you do if you encounter a suspicious scam reporting website?",
+            "choices": {
+                "a": "Report it to authorities and avoid sharing any personal information",
+                "b": "Provide your personal information to test their services",
+                "c": "Ignore the warnings and continue using the website",
+                "d": "Share the website with friends to get their opinion"
+            },
+            "correctAnswer": "a",
+            "hint": "Reporting suspicious websites helps protect others from potential scams.",
+            "correctFeedback": "Correct! Reporting suspicious websites is important to prevent scams.",
+            "wrongFeedback": "Incorrect. Avoid sharing personal information with suspicious websites."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+    
+},
+    {
+    "createdByUserId": 2,
+    "isUserCreated": true,
+    "createdDate": "2025-01-25",
+    "topic": "Reporting and Recovering from Scams",
+    "subtopic": "Recovering from Scams",
+    "difficulty": "Beginner",
+    "quizName": "Identify the steps to take after falling for a scam",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "What should you do after falling victim to a scam involving your credit card?",
+            "choices": {
+                "a": "Report the incident to your credit card company immediately",
+                "b": "Wait for a month to see if charges appear",
+                "c": "Share the scammer's information with friends only",
+                "d": "Post about the incident online before taking any action"
+            },
+            "correctAnswer": "a",
+            "hint": "Your credit card provider can help block further fraudulent transactions.",
+            "correctFeedback": "Correct! Reporting the incident to your credit card company is essential.",
+            "wrongFeedback": "Incorrect. Acting quickly by informing your provider is the best approach."
+        },
+        {
+            "questionId": 2,
+            "question": "Which agency should you contact in your country after falling for a scam?",
+            "choices": {
+                "a": "Your national anti-fraud agency or cybercrime unit",
+                "b": "The scammer’s website",
+                "c": "A local social media influencer",
+                "d": "Your friend who has experience with scams"
+            },
+            "correctAnswer": "a",
+            "hint": "Every country has agencies dedicated to handling scams and cybercrimes.",
+            "correctFeedback": "Correct! Contacting a national anti-fraud agency is the proper action.",
+            "wrongFeedback": "Incorrect. Reporting to an official agency is the right course of action."
+        },
+        {
+            "questionId": 3,
+            "question": "What should you do if you suspect a scammer has gained access to your personal information?",
+            "choices": {
+                "a": "Change your passwords and enable two-factor authentication",
+                "b": "Continue using the same passwords and accounts",
+                "c": "Share your concerns with the scammer",
+                "d": "Ignore the suspicion and carry on as usual"
+            },
+            "correctAnswer": "a",
+            "hint": "Protect your accounts by changing passwords and adding extra security measures.",
+            "correctFeedback": "Correct! Changing passwords and enabling 2FA can secure your accounts.",
+            "wrongFeedback": "Incorrect. Suspected compromises should be addressed promptly."
+        },
+        {
+            "questionId": 4,
+            "question": "What should you do if you suspect your password has been compromised?",
+            "choices": {
+                "a": "Continue using the same password",
+                "b": "Change the password for the affected account and any others that share it",
+                "c": "Share the password with friends to get their opinion",
+                "d": "Ignore the suspicion and carry on as usual"
+            },
+            "correctAnswer": "b",
+            "hint": "Act quickly to protect your accounts.",
+            "correctFeedback": "Correct! Changing compromised passwords is essential for security.",
+            "wrongFeedback": "Incorrect. Suspected compromises should be addressed promptly."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 50
+        
+},
+    {
+    "createdByUserId": 1,
+    "isUserCreated": false,
+    "createdDate": "2025-01-25",
+    "topic": "Reporting and Recovering from Scams",
+    "subtopic": "Recovering from Scams",
+    "difficulty": "Advanced",
+    "quizName": "Recognize the signs of a scam recovery website",
+    "questions": [
+        {
+            "questionId": 1,
+            "question": "What is a red flag for a scam recovery website?",
+            "choices": {
+                "a": "The website guarantees 100% recovery of funds within hours",
+                "b": "The website has clear terms and conditions",
+                "c": "The website provides resources and advice for free",
+                "d": "The website is linked by a government anti-fraud website"
+            },
+            "correctAnswer": "a",
+            "hint": "Be wary of any service that guarantees full recovery with unrealistic timelines.",
+            "correctFeedback": "Correct! Scammers often promise unrealistic outcomes to lure victims.",
+            "wrongFeedback": "Incorrect. Be skeptical of promises that sound too good to be true."
+        },
+        {
+            "questionId": 2,
+            "question": "How can you determine if a scam recovery website is legitimate?",
+            "choices": {
+                "a": "Check if it is endorsed by a reputable organization",
+                "b": "Trust it if it charges a fee upfront for services",
+                "c": "Rely on testimonials on their website alone",
+                "d": "Ignore online reviews and focus on their guarantees"
+            },
+            "correctAnswer": "a",
+            "hint": "Reputable endorsements can help confirm the website's legitimacy.",
+            "correctFeedback": "Correct! Trusted endorsements are a sign of a legitimate website.",
+            "wrongFeedback": "Incorrect. Legitimate websites often have endorsements from recognized authorities."
+        },
+        {
+            "questionId": 3,
+            "question": "What should you do if a scam recovery website asks for payment upfront?",
+            "choices": {
+                "a": "Avoid it and report the website to authorities",
+                "b": "Proceed with the payment to recover your funds",
+                "c": "Share your credit card details to test their services",
+                "d": "Ignore the request and continue using the website"
+            },
+            "correctAnswer": "a",
+            "hint": "Scam recovery services should not ask for payment before providing results.",
+            "correctFeedback": "Correct! Avoid websites that request upfront payment for recovery services.",
+            "wrongFeedback": "Incorrect. Be cautious with websites that ask for payment before delivering results."
+        },
+        {
+            "questionId": 4,
+            "question": "What is a common tactic used by scam recovery websites to pressure victims into using their services?",
+            "choices": {
+                "a": "Offering a free trial with no obligations",
+                "b": "Promising immediate recovery of funds with minimal effort",
+                "c": "Providing detailed information on the recovery process",
+                "d": "Guaranteeing a full refund if unsatisfied with the results"
+            },
+            "correctAnswer": "b",
+            "hint": "Scammers often use urgency and promises of quick results to manipulate victims.",
+            "correctFeedback": "Correct! Scam recovery websites may promise immediate recovery to pressure victims.",
+            "wrongFeedback": "Incorrect. Be cautious of services that promise quick and guaranteed results."
+        }
+    ],
+    "status": "accepted",
+    "hasBeenAttempted": false,
+    "hasBeenRated": false,
+    "averageRating": 0,
+    "totalAttempts": 0,
+    "xp": 75
+    
+},
+    {
+
+        "createdByUserId" : 2,
+        "isUserCreated" : true,
+        "createdDate" : "2020-01-01",
+        "topic": "Legal and Policy Frameworks",
+        "subtopic": "Regulations Related to Cybercrime and Email Scams",
+        "difficulty": "Beginner",
+        "quizName": "Cybercrime and Email Scams",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is the purpose of laws and regulations against email scams?",
+                "choices": {
+                    "a": " To protect individuals and organizations from fraudulent activities",
+                    "b": "To punish people who send emails for marketing purposes",
+                    "c": "To encourage the use of encrypted email services",
+                    "d": "To stop people from using email entirely"
+                },
+                "correctAnswer": "a",
+                "hint": "The purpose of laws and regulations against email scams is to protect individuals and organizations from fraudulent activities.",
+                "correctFeedback": "Correct! The purpose of laws and regulations against email scams is to protect individuals and organizations from fraudulent activities.",
+                "wrongFeedback": "Incorrect. The purpose of laws and regulations against email scams is to protect individuals and organizations from fraudulent activities."
+            },
+            {
+                "questionId": 2,
+                "question": "What are some common penalties for individuals caught sending scam emails?",
+                "choices": {
+                    "a": "Fines, imprisonment or both",
+                    "b": "Suspension of email accounts",
+                    "c": "Forced to send apology emails to victims",
+                    "d": "Loss of internet access privileges"
+                },
+                "correctAnswer": "a",
+                "hint": "Common penalties for individuals caught sending scam emails are not as simple as suspension of email accounts or loss of internet access privileges.",
+                "correctFeedback": "Correct! Common penalties for individuals caught sending scam emails include fines, imprisonment or both.",
+                "wrongFeedback": "Incorrect. Common penalties for individuals caught sending scam emails include fines, imprisonment or both."
+            },
+            {
+                "questionId": 3,
+                "question": "What is the role of law enforcement agencies in combating cybercrime?",
+                "choices": {
+                    "a": "To ignore cybercrime and focus on other crimes",
+                    "b": "To investigate and prosecute cybercriminals",
+                    "c": "To provide training to individuals on how to commit cybercrimes",
+                    "d": "To encourage the use of unsecured networks"
+                },
+                "correctAnswer": "b",
+                "hint": "The role of law enforcement agencies in combating cybercrime is to investigate and prosecute cybercriminals.",
+                "correctFeedback": "Correct! The role of law enforcement agencies in combating cybercrime is to investigate and prosecute cybercriminals.",
+                "wrongFeedback": "Incorrect. The role of law enforcement agencies in combating cybercrime is to investigate and prosecute cybercriminals."
+            },
+            {
+                "questionId": 4,
+                "question": "What is the purpose of regulations related to cybercrime?",
+                "choices": {
+                    "a": "To make it easier for cybercriminals to commit crimes",
+                    "b": "To protect individuals and organizations from cyber threats",
+                    "c": "To encourage the use of unsecured networks",
+                    "d": "To punish individuals who report cybercrimes"
+                },
+                "correctAnswer": "b",
+                "hint": "The purpose of regulations related to cybercrime is to protect individuals and organizations from cyber threats.",
+                "correctFeedback": "Correct! The purpose of regulations related to cybercrime is to protect individuals and organizations from cyber threats.",
+                "wrongFeedback": "Incorrect. The purpose of regulations related to cybercrime is to protect individuals and organizations from cyber threats."
+            }
+        ],
+        "status" : "accepted",
+        "hasBeenAttempted" : false,
+        "hasBeenRated" : false,
+        "averageRating" : 0,
+        "totalAttempts" : 0,
+        "xp": 25
+        
+    },
+    {
+        "createdByUserId" : 2,
+        "isUserCreated" : true,
+        "createdDate" : "2020-01-01",
+        "topic": "Preventive Measures",
+        "subtopic": "Avoiding Sharing Personal Information Online",
+        "difficulty": "Intermediate",
+        "quizName": "Protecting Personal Information Online",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "Why is it important to avoid sharing personal information online?",
+                "choices": {
+                    "a": "To protect yourself from identity theft and fraud",
+                    "b": "To increase your social media following",
+                    "c": "To make it easier for hackers to access your accounts",
+                    "d": "To show off your personal information to others"
+                },
+                "correctAnswer": "a",
+                "hint": "It is important to avoid sharing personal information online to protect yourself from identity theft and fraud.",
+                "correctFeedback": "Correct! It is important to avoid sharing personal information online to protect yourself from identity theft and fraud.",
+                "wrongFeedback": "Incorrect. It is important to avoid sharing personal information online to protect yourself from identity theft and fraud."
+            },
+            {
+                "questionId": 2,
+                "question": "What are some common ways hackers can use personal information shared online?",
+                "choices": {
+                    "a": "To send you personalized advertisements",
+                    "b": "To create fake social media accounts in your name",
+                    "c": "To improve your online security",
+                    "d": "To help you remember your passwords"
+                },
+                "correctAnswer": "b",
+                "hint": "Hackers can use personal information shared online to create fake social media accounts in your name, among other things.",
+                "correctFeedback": "Correct! Hackers can use personal information shared online to create fake social media accounts in your name, among other things.",
+                "wrongFeedback": "Incorrect. Hackers can use personal information shared online to create fake social media accounts in your name, among other things."
+            },
+            {
+                "questionId": 3,
+                "question": "What are some tips for protecting your personal information online?",
+                "choices": {
+                    "a": "Use strong, unique passwords for each account",
+                    "b": "Share your personal information with strangers",
+                    "c": "Post your personal information on social media",
+                    "d": "Use the same password for all your accounts"
+                },
+                "correctAnswer": "a",
+                "hint": "Some tips for protecting your personal information online include using strong, unique passwords for each account.",
+                "correctFeedback": "Correct! Some tips for protecting your personal information online include using strong, unique passwords for each account.",
+                "wrongFeedback": "Incorrect. Some tips for protecting your personal information online include using strong, unique passwords for each account."
+            },
+            {
+                "questionId": 4,
+                "question": "What should you do if you suspect your personal information has been compromised?",
+                "choices": {
+                    "a": "Ignore the issue and hope it goes away",
+                    "b": "Contact the appropriate authorities and change your passwords",
+                    "c": "Share more personal information online",
+                    "d": "Do nothing and continue sharing personal information"
+                },
+                "correctAnswer": "b",
+                "hint": "If you suspect your personal information has been compromised, you should contact the appropriate authorities and change your passwords.",
+                "correctFeedback": "Correct! If you suspect your personal information has been compromised, you should contact the appropriate authorities and change your passwords.",
+                "wrongFeedback": "Incorrect. If you suspect your personal information has been compromised, you should contact the appropriate authorities and change your passwords."
+            }
+        ],
+        "status" : "accepted",
+        "hasBeenAttempted" : false,
+        "hasBeenRated" : false,
+        "averageRating" : 0,
+        "totalAttempts" : 0,
+        "xp": 50
+        
+    },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-01-03",
+        "topic": "Safe Online Transactions",
+        "subtopic": "Securing Payment Information",
+        "difficulty": "Beginner",
+        "quizName": "Daily Quiz #15 - Secure Payment Practices Quiz",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is a common method cybercriminals use to steal payment information during online transactions?",
+                "choices": {
+                    "a": "Sending physical letters requesting payment details",
+                    "b": "Using secure payment gateways",
+                    "c": "Creating fake websites that mimic legitimate ones to steal information",
+                    "d": "Asking for payment information over the phone"
+                },
+                "correctAnswer": "c",
+                "hint": "Cybercriminals often create fake websites to trick users into entering their payment information.",
+                "correctFeedback": "Correct! Cybercriminals create fake websites that mimic legitimate ones to steal payment information.",
+                "wrongFeedback": "Incorrect. Cybercriminals commonly create fake websites to steal payment information."
+            },
+            {
+                "questionId": 2,
+                "question": "Why is it important to ensure a website is secure before entering payment information?",
+                "choices": {
+                    "a": "To receive discounts and promotions",
+                    "b": "To speed up the checkout process",
+                    "c": "To protect your payment information from being intercepted or stolen",
+                    "d": "To access exclusive online deals"
+                },
+                "correctAnswer": "c",
+                "hint": "Security ensures that your payment information is protected from cyber threats.",
+                "correctFeedback": "Correct! Ensuring a website is secure helps protect your payment information from being intercepted or stolen.",
+                "wrongFeedback": "Incorrect. Ensuring website security is crucial to safeguarding your payment details."
+            },
+            {
+                "questionId": 3,
+                "question": "What should you look for to identify a secure website for online transactions?",
+                "choices": {
+                    "a": "Visible padlock symbol in the browser's address bar",
+                    "b": "Pop-up windows asking for payment details",
+                    "c": "Website with many ads and flashy banners",
+                    "d": "Unsecured connection message in the browser"
+                },
+                "correctAnswer": "a",
+                "hint": "A specific symbol in the browser indicates a secure connection for online transactions.",
+                "correctFeedback": "Correct! Look for the visible padlock symbol in the browser's address bar to identify a secure website for transactions.",
+                "wrongFeedback": "Incorrect. The visible padlock symbol in the browser's address bar signifies a secure connection for online transactions."
+            },
+            {
+                "questionId": 4,
+                "question": "What is the safest way to input payment information on public Wi-Fi networks?",
+                "choices": {
+                    "a": "Share payment details in public chat rooms",
+                    "b": "Use a VPN (Virtual Private Network) for secure connection",
+                    "c": "Save payment details in browser autofill",
+                    "d": "Connect to unsecured public Wi-Fi networks directly"
+                },
+                "correctAnswer": "b",
+                "hint": "A secure method to protect payment information when using public Wi-Fi.",
+                "correctFeedback": "Correct! Using a VPN (Virtual Private Network) on public Wi-Fi networks provides a more secure connection for inputting payment information.",
+                "wrongFeedback": "Incorrect. Using a VPN is the safest way to input payment information on public Wi-Fi networks."
+            }
+        ],
+        "status": "accepted",
+        "hasBeenAttempted": false,
+        "hasBeenRated": false,
+        "averageRating": 0,
+        "totalAttempts": 0,
+        "xp": 25
+        
+    },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-02-03",
+        "topic": "Email Security & Awareness",
+        "subtopic": "Red Flags to Look Out For",
+        "difficulty": "Intermediate",
+        "quizName": "Daily Quiz #16 - Email Scam Prevention Awareness",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is a common red flag in suspect emails?",
+                "choices": {
+                    "a": "The sender's email address is unfamiliar",
+                    "b": "The email contains personal greetings",
+                    "c": "The email requests urgent action without explanation",
+                    "d": "The email is well-formatted with correct spelling and grammar"
+                },
+                "correctAnswer": "a",
+                "hint": "Pay attention to the sender's email address when assessing the legitimacy of an email.",
+                "correctFeedback": "Correct! An unfamiliar sender's email address is a common red flag in suspect emails.",
+                "wrongFeedback": "Incorrect. Pay close attention to the sender's email address as it can be a red flag in suspect emails."
+            },
+            {
+                "questionId": 2,
+                "question": "What should you be cautious of in emails that claim you've won a prize?",
+                "choices": {
+                    "a": "Providing your personal information to claim the prize",
+                    "b": "Sending payment to cover shipping fees for the prize",
+                    "c": "Downloading attachments or clicking links in the email",
+                    "d": "Ignoring the email as it might be a genuine prize notification"
+                },
+                "correctAnswer": "a",
+                "hint": "Be wary of emails asking for personal information or payment related to claiming a prize.",
+                "correctFeedback": "Correct! Exercise caution when asked to provide personal information to claim a prize in unsolicited emails.",
+                "wrongFeedback": "Incorrect. Providing personal information in response to prize-winning emails can be risky."
+            },
+            {
+                "questionId": 3,
+                "question": "Which of the following is a warning sign of a potential email scam?",
+                "choices": {
+                    "a": "The email contains links to official websites",
+                    "b": "You are asked to verify your account details by clicking a link",
+                    "c":"The email includes genuine-looking logos and branding",
+                    "d": "The email emphasizes a sense of urgency to act immediately"
+                },
+                "correctAnswer": "d",
+                "hint": "Watch out for emails that create a sense of urgency to prompt immediate action.",
+                "correctFeedback": "Correct! Emails that pressure you to act urgently are often indicators of potential scams.",
+                "wrongFeedback": "Incorrect. Emails that emphasize urgency may be attempting to rush you into a scam."
+            },
+            {
+                "questionId": 4,
+                "question": "What precaution should you take before clicking on links in suspect emails?",
+                "choices": {
+                    "a": "Disable your email security settings",
+                    "b": "Hover over the link to preview the URL without clicking",
+                    "c": "Click on the link to see where it leads",
+                    "d": "Forward the email to a friend for advice"
+                },
+                "correctAnswer": "b",
+                "hint": "There is a safe way to preview links in emails without directly clicking on them.",
+                "correctFeedback": "Correct! Hovering over links to preview their URLs can help you assess their legitimacy before clicking.",
+                "wrongFeedback": "Incorrect. It's safer to preview links by hovering over them rather than directly clicking."
+            }
+        ],
+        "status": "accepted",
+        "hasBeenAttempted": false,
+        "hasBeenRated": false,
+        "averageRating": 0,
+        "totalAttempts": 0,
+        "xp": 50
+    
+    },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-03-03",
+        "topic": "Safeguarding Personal Data Online",
+        "subtopic": "Data Protection Measures",
+        "difficulty": "Advanced",
+        "quizName": "Daily Quiz #17 - Secure Data Practices Quiz",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is encryption in terms of data protection?",
+                "choices": {
+                    "a": "A process of compressing files to save storage space",
+                    "b": "A method of converting information into a code to prevent unauthorized access",
+                    "c": "A technique for tracking online activities for security purposes",
+                    "d": "A system for backing up data to external servers"
+                },
+                "correctAnswer": "b",
+                "hint": "Encryption involves converting data into a code to protect its confidentiality.",
+                "correctFeedback": "Correct! Encryption is the process of converting information into a code to prevent unauthorized access.",
+                "wrongFeedback": "Incorrect. Encryption is used to protect data by converting it into a code."
+            },
+            {
+                "questionId": 2,
+                "question": "What is two-factor authentication (2FA) and how does it enhance data security?",
+                "choices": {
+                    "a": "A method that requires two different people to access the same account",
+                    "b": "A security process that requires two forms of identification to access an account",
+                    "c": "A feature that automatically updates passwords every two weeks",
+                    "d": "A tool that scans devices for viruses and malware every two hours"
+                },
+                "correctAnswer": "b",
+                "hint": "Two-factor authentication adds an extra layer of security beyond just a password.",
+                "correctFeedback": "Great job! 2FA enhances security by requiring two forms of identification to access an account.",
+                "wrongFeedback": "Not quite. 2FA adds an extra layer of security by requiring more than just a password for access."
+            },
+            {
+                "questionId": 3,
+                "question": "What is the purpose of a VPN (Virtual Private Network) when it comes to online privacy?",
+                "choices": {
+                    "a": "To increase internet speed and reduce latency",
+                    "b": "To hide your IP address and encrypt internet traffic",
+                    "c": "To improve online visibility and social media engagement",
+                    "d": "To share files securely between different devices"
+                },
+                "correctAnswer": "b",
+                "hint": "VPNs are used to protect your online privacy and security by hiding your real IP address.",
+                "correctFeedback": "Correct! VPNs help hide your IP address and encrypt your internet traffic for enhanced privacy.",
+                "wrongFeedback": "Incorrect. VPNs are primarily used to protect online privacy by masking your real IP address."
+            },
+            {
+                "questionId": 4,
+                "question": "What is the main purpose of regularly updating software and applications on your devices?",
+                "choices": {
+                    "a": "To increase the device's physical storage capacity",
+                    "b": "To enhance the device's aesthetics and appearance",
+                    "c": "To fix security vulnerabilities and protect against cyber threats",
+                    "d": "To improve the device's processing speed and performance"
+                },
+                "correctAnswer": "c",
+                "hint": "Software updates often include security patches to address known vulnerabilities.",
+                "correctFeedback": "Well done! Regularly updating software helps to fix security vulnerabilities and protect against cyber threats.",
+                "wrongFeedback": "Incorrect. Updating software is crucial to address security vulnerabilities and safeguard your device against threats."
+            }
+        ],
+        "status": "accepted",
+        "hasBeenAttempted": false,
+        "hasBeenRated": false,
+        "averageRating": 0,
+        "totalAttempts": 0,
+        "xp": 75
+        
+    },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-04-03",
+        "topic": "Cybersecurity Best Practices",
+        "subtopic": "Email Security Measures",
+        "difficulty": "Advanced",
+        "quizName": "Daily Quiz #18 - Email Scam Prevention and Safe Online Practices",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is a common characteristic of a phishing email?",
+                "choices": {
+                    "a": "Includes only text without any links",
+                    "b": "Urges you to click on a suspicious link or download an attachment",
+                    "c": "Contains excessive use of emojis",
+                    "d": "Directly asks for legitimate personal information"
+                },
+                "correctAnswer": "b",
+                "hint": "Phishing emails often contain deceptive links or attachments to steal information.",
+                "correctFeedback": "Correct! Phishing emails typically urge recipients to click on suspicious links or download attachments.",
+                "wrongFeedback": "Incorrect. Phishing emails commonly include deceptive links or attachments to trick individuals."
+            },
+            {
+                "questionId": 2,
+                "question": "Which of the following is a red flag indicating a possible email scam?",
+                "choices": {
+                    "a": "The email address matches the official website domain",
+                    "b": "Email content includes urgent requests for immediate action",
+                    "c": "The email is well-written with no spelling or grammar errors",
+                    "d": "Attachments are common file types like PDF or Word documents"
+                },
+                "correctAnswer": "b",
+                "hint": "Scammers often create a sense of urgency to pressure recipients into taking quick actions.",
+                "correctFeedback": "Correct! Urgent requests for immediate action are common in email scams to create pressure.",
+                "wrongFeedback": "Incorrect. Urgent requests for immediate action are often a red flag for email scams."
+            },
+            {
+                "questionId": 3,
+                "question": "What should you do if you receive an unexpected email requesting sensitive information?",
+                "choices": {
+                    "a": "Immediately respond with the requested information for verification",
+                    "b": "Call the number provided in the email to verify the sender's identity",
+                    "c": "Click on any links provided to confirm the request",
+                    "d": "Contact the company or individual using trusted contact information"
+                },
+                "correctAnswer": "d",
+                "hint": "Verifying the request through other channels can help protect your information.",
+                "correctFeedback": "Correct! Contacting the company or individual through trusted means is a safe practice if you receive such requests.",
+                "wrongFeedback": "Incorrect. It's crucial to verify unexpected requests through trusted channels to avoid falling for scams."
+            },
+            {
+                "questionId": 4,
+                "question": "Why is it important to regularly update your email account's password?",
+                "choices": {
+                    "a": "To increase email storage capacity",
+                    "b": "To improve email delivery speed",
+                    "c": "To prevent unauthorized access and enhance security",
+                    "d": "To customize email themes and layouts"
+                },
+                "correctAnswer": "c",
+                "hint": "Regular password updates help protect your account from unauthorized access.",
+                "correctFeedback": "Correct! Regularly changing your email password enhances security by preventing unauthorized access.",
+                "wrongFeedback": "Incorrect. Updating your email password regularly is crucial to prevent unauthorized access and improve security."
+            }
+        ],
+        "status": "accepted",
+        "hasBeenAttempted": false,
+        "hasBeenRated": false,
+        "averageRating": 0,
+        "totalAttempts": 0,
+        "xp": 75
+        
+    },
+    {
+        "createdByUserId": 1,
+        "isUserCreated": false,
+        "createdDate": "2025-05-03",
+        "topic": "Email Security & Awareness",
+        "subtopic": "Email Phishing Prevention",
+        "difficulty": "Beginner",
+        "quizName": "Daily Quiz #19 - Email Security Awareness Quiz",
+        "questions": [
+            {
+                "questionId": 1,
+                "question": "What is a common characteristic of a phishing email?",
+                "choices": {
+                    "a": "Direct and clear messages with no urgency",
+                    "b": "Urgent requests for personal information or financial details",
+                    "c": "Official emails from known companies with generic content",
+                    "d": "Emails with accurate spelling and professional layout"
+                },
+                "correctAnswer": "b",
+                "hint": "Phishing emails often create a sense of urgency to trick recipients into acting quickly.",
+                "correctFeedback": "Correct! Phishing emails frequently contain urgent requests for sensitive information to create a sense of urgency.",
+                "wrongFeedback": "Incorrect. Phishing emails often include urgent requests for personal or financial information."
+            },
+            {
+                "questionId": 2,
+                "question": "How can you verify the legitimacy of a suspicious email before taking any action?",
+                "choices": {
+                    "a": "Click on any links provided to verify the sender",
+                    "b": "Contact the sender directly through official channels",
+                    "c": "Reply to the email with your personal details for confirmation",
+                    "d": "Download any attachments to check for authenticity"
+                },
+                "correctAnswer": "b",
+                "hint": "When in doubt about an email's authenticity, it is best to directly contact the sender through official channels.",
+                "correctFeedback": "Correct! Verifying the sender through official channels is a safer way to confirm the legitimacy of an email.",
+                "wrongFeedback": "Incorrect. Avoid clicking on links or providing personal information in suspicious emails; contact the sender through official channels instead."
+            },
+            {
+                "questionId": 3,
+                "question": "What is a red flag that may indicate a phishing email?",
+                "choices": {
+                    "a": "The email address of the sender matches the company's official domain",
+                    "b": "Spelling and grammatical errors throughout the email",
+                    "c": "Use of personalized greetings and specific details about the recipient",
+                    "d": "Including links to well-known websites for further information"
+                },
+                "correctAnswer": "b",
+                "hint": "Phishing emails often contain spelling and grammatical errors due to their fraudulent nature.",
+                "correctFeedback": "Correct! Spelling and grammatical errors can be a red flag indicating a phishing email.",
+                "wrongFeedback": "Incorrect. Look out for errors in content like spelling and grammar that are common in phishing emails."
+            },
+            {
+                "questionId": 4,
+                "question": "What should you do if you receive a suspicious email asking for personal information?",
+                "choices": {
+                    "a": "Reply with the requested information to avoid further action",
+                    "b": "Delete the email without opening it to prevent any risks",
+                    "c": "Click on any links provided to investigate the sender",
+                    "d": "Report the email as phishing to your email provider"
+                },
+                "correctAnswer": "d",
+                "hint": "Reporting suspicious emails as phishing helps protect you and others from potential scams.",
+                "correctFeedback": "Correct! Reporting suspicious emails as phishing to your email provider is a proactive step to protect yourself and others.",
+                "wrongFeedback": "Incorrect. Instead of replying or clicking on links, it's best to report suspicious emails as phishing to prevent risks."
+            }
+        ],
+        "status": "accepted",
+        "hasBeenAttempted": false,
+        "hasBeenRated": false,
+        "averageRating": 0,
+        "totalAttempts": 0,
+        "xp": 25
+        
+    }
+]
