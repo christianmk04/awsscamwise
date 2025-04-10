@@ -525,7 +525,7 @@ const QMDailyPractice = () => {
                         <Col md={10}>
 
                             <h2 className='d-flex align-items-center'>
-                                Quiz #{quizDetails.quizId}: {quizDetails.quizName}
+                                {quizDetails.quizId}: {quizDetails.quizName}
                                 
                                 <Badge 
                                     bg={quizDetails.difficulty === 'Beginner' ? 'success' : quizDetails.difficulty === 'Intermediate' ? 'warning' : 'danger'}
@@ -539,6 +539,7 @@ const QMDailyPractice = () => {
                             <p className="mb-0 text-muted">
                                 {quizDetails.mainTopic} &gt; {quizDetails.subTopic}
                             </p>
+                            <p>Source: LLM Generated</p>
                         </Col>
                         <Col md={2} className="d-flex justify-content-end align-items-center">
                             <div className="d-flex align-items-center me-4">
