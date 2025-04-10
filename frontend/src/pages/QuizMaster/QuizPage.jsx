@@ -507,7 +507,7 @@ const QuizPage = () => {
                         <Col md={10}>
 
                             <h2 className='d-flex align-items-center'>
-                                Quiz #{quizDetails.quizId}: {quizDetails.quizName}
+                                {quizDetails.quizName}
                                 
                                 <Badge 
                                     bg={quizDetails.difficulty === 'Beginner' ? 'success' : quizDetails.difficulty === 'Intermediate' ? 'warning' : 'danger'}
@@ -521,6 +521,7 @@ const QuizPage = () => {
                             <p className="mb-0 text-muted">
                                 {quizDetails.mainTopic} &gt; {quizDetails.subTopic}
                             </p>
+                            <p>Source: https://github.com/PhishyAlice/awesome-phishing</p>
                         </Col>
                         <Col md={2} className="d-flex justify-content-end align-items-center">
                             <div className="d-flex align-items-center me-4">
