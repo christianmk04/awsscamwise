@@ -525,7 +525,7 @@ const QMDailyPractice = () => {
                         <Col md={10}>
 
                             <h2 className='d-flex align-items-center'>
-                                {quizDetails.quizId}: {quizDetails.quizName}
+                                {quizDetails.quizName}
                                 
                                 <Badge 
                                     bg={quizDetails.difficulty === 'Beginner' ? 'success' : quizDetails.difficulty === 'Intermediate' ? 'warning' : 'danger'}
