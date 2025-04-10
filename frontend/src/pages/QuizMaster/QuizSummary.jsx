@@ -1,7 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { Card, Badge, Row, Col, Container, Nav, Button, ProgressBar } from 'react-bootstrap';
-import { Clock, Trophy, BarChart2, Award, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Clock, Trophy, BarChart2, Award, ChevronLeft, ChevronRight, Info, ThumbsUp, ThumbsDown } from 'lucide-react';
 import Confetti from 'react-confetti';
 
 const QuizSummary = () => {
@@ -12,7 +12,7 @@ const QuizSummary = () => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [showAllQuestions, setShowAllQuestions] = useState(false);
 
-    // Color scheme matching QuizPage
+    // Consistent color scheme throughout the page
     const colors = {
         primary: '#4a6fa5',
         secondary: '#166088',
@@ -101,7 +101,9 @@ const QuizSummary = () => {
                                 backgroundColor: isCorrect ? colors.success : colors.danger,
                                 color: 'white',
                                 fontWeight: 'bold',
-                                opacity: currentQuestionIndex === index ? 1 : 0.7
+                                opacity: currentQuestionIndex === index ? 1 : 0.7,
+                                border: currentQuestionIndex === index ? '2px solid #333' : 'none',
+                                boxShadow: currentQuestionIndex === index ? '0 0 0 2px rgba(255,255,255,0.8)' : 'none'
                             }}
                         >
                             {index + 1}
@@ -112,6 +114,24 @@ const QuizSummary = () => {
         );
     };
 
+    // Create a consistent stat box component to reduce repetition
+    const StatBox = ({ icon, title, value, color, bgColor }) => (
+        <div className="p-3" style={{ 
+            backgroundColor: bgColor || colors.light, 
+            borderRadius: '8px',
+            height: '100%',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.05)',
+            transition: 'transform 0.2s',
+            border: '1px solid rgba(0,0,0,0.05)'
+        }}>
+            <div className="text-center mb-2">
+                {icon}
+            </div>
+            <h5 className="text-center mb-2" style={{ fontSize: '0.95rem', color: colors.dark }}>{title}</h5>
+            <p className="h3 mb-0 text-center" style={{ color: color || colors.dark, fontWeight: 'bold' }}>{value}</p>
+        </div>
+    );
+
     return (
         <div style={{ backgroundColor: '#f9fafb', minHeight: '100vh' }}>
             {showConfetti && <Confetti />}
@@ -119,7 +139,7 @@ const QuizSummary = () => {
             {/* Fixed Header */}
             <div style={{ 
                 backgroundColor: 'white', 
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
                 position: 'sticky',
                 top: 0,
                 zIndex: 1000
@@ -133,7 +153,7 @@ const QuizSummary = () => {
                                     bg={quizDetails.difficulty === 'Beginner' ? 'success' : quizDetails.difficulty === 'Intermediate' ? 'warning' : 'danger'}
                                     text={quizDetails.difficulty === 'Beginner' ? 'white' : quizDetails.difficulty === 'Intermediate' ? 'dark' : 'white'} 
                                     className="mx-4"
-                                    style={{ fontSize: '15px' }}
+                                    style={{ fontSize: '15px', padding: '6px 10px' }}
                                 >
                                     {quizDetails.difficulty}
                                 </Badge>
@@ -143,12 +163,12 @@ const QuizSummary = () => {
                             </p>
                         </Col>
                         <Col md={3} className="d-flex justify-content-end align-items-center">
-                            <div className="d-flex align-items-center me-4">
-                                <Clock size={20} className="me-1" style={{ color: colors.primary }} />
+                            <div className="d-flex align-items-center me-4 p-2 rounded" style={{ backgroundColor: colors.light }}>
+                                <Clock size={20} className="me-2" style={{ color: colors.primary }} />
                                 <span style={{ fontWeight: 'bold', color: colors.primary }}>{formatTime(timeTaken)}</span>
                             </div>
-                            <div className="d-flex align-items-center">
-                                <Trophy size={20} className="me-1" style={{ color: colors.primary }} />
+                            <div className="d-flex align-items-center p-2 rounded" style={{ backgroundColor: colors.light }}>
+                                <Trophy size={20} className="me-2" style={{ color: colors.primary }} />
                                 <span style={{ fontWeight: 'bold', color: getScoreColor(score) }}>{score.toFixed(1)}%</span>
                             </div>
                         </Col>
@@ -158,7 +178,7 @@ const QuizSummary = () => {
                             <ProgressBar 
                                 now={score} 
                                 label={`${score.toFixed(1)}%`}
-                                style={{ height: '1.5em', backgroundColor: '#e9ecef' }}
+                                style={{ height: '1.5em', backgroundColor: '#e9ecef', borderRadius: '8px' }}
                                 variant={score >= 75 ? "success" : score >= 50 ? "warning" : "danger"}
                                 className="my-3"
                             />
@@ -184,7 +204,8 @@ const QuizSummary = () => {
                     style={{ 
                         borderRadius: '12px',
                         overflow: 'hidden',
-                        borderTop: `4px solid ${getScoreColor(score)}`
+                        borderTop: `4px solid ${getScoreColor(score)}`,
+                        boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
                     }}
                 >
                     <Card.Body className="py-4">
@@ -192,54 +213,48 @@ const QuizSummary = () => {
                         <h3 className="mt-3">Your Score: <span style={{ fontWeight: 'bold', color: getScoreColor(score) }}>{score.toFixed(1)}%</span></h3>
                         
                         <div className="mt-4">
-                            <Row className="text-center">
+                            <Row className="text-center g-3">
                                 <Col md={2} className="mb-3 mb-md-0">
-                                    <div className="p-3" style={{ backgroundColor: colors.light, borderRadius: '8px' }}>
-                                        <div className="mb-2">
-                                            <BarChart2 size={30} style={{ color: colors.primary }} />
-                                        </div>
-                                        <h5>Total Questions</h5>
-                                        <p className="h3 mb-0">{totalQuestions}</p>
-                                    </div>
+                                    <StatBox 
+                                        icon={<BarChart2 size={30} style={{ color: colors.primary }} />}
+                                        title="Total Questions"
+                                        value={totalQuestions}
+                                    />
                                 </Col>
                                 <Col md={3} className="mb-3 mb-md-0">
-                                    <div className="p-3" style={{ backgroundColor: colors.light, borderRadius: '8px' }}>
-                                        <div className="mb-2">
-                                            <Award size={30} style={{ color: colors.success }} />
-                                        </div>
-                                        <h5>Correct Answers</h5>
-                                        <p className="h3 mb-0" style={{ color: colors.success }}>{correctAnswers}</p>
-                                    </div>
+                                    <StatBox 
+                                        icon={<ThumbsUp size={30} style={{ color: colors.success }} />}
+                                        title="Correct Answers"
+                                        value={correctAnswers}
+                                        color={colors.success}
+                                        bgColor="#f0f9f0"
+                                    />
                                 </Col>
                                 <Col md={3} className="mb-3 mb-md-0">
-                                    <div className="p-3" style={{ backgroundColor: colors.light, borderRadius: '8px' }}>
-                                        <div className="mb-2">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke={colors.danger} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3H10z"></path></svg>
-                                        </div>
-                                        <h5>Incorrect Answers</h5>
-                                        <p className="h3 mb-0" style={{ color: colors.danger }}>{totalQuestions - correctAnswers}</p>
-                                    </div>
+                                    <StatBox 
+                                        icon={<ThumbsDown size={30} style={{ color: colors.danger }} />}
+                                        title="Incorrect Answers"
+                                        value={totalQuestions - correctAnswers}
+                                        color={colors.danger}
+                                        bgColor="#fdf0f0"
+                                    />
                                 </Col>
                                 <Col md={2}>
-                                    <div className="p-3" style={{ backgroundColor: colors.light, borderRadius: '8px' }}>
-                                        <div className="mb-2">
-                                            <Clock size={30} style={{ color: colors.secondary }} />
-                                        </div>
-                                        <h5>Time Taken</h5>
-                                        <p className="h3 mb-0">{formatTime(timeTaken)}</p>
-                                    </div>
+                                    <StatBox 
+                                        icon={<Clock size={30} style={{ color: colors.secondary }} />}
+                                        title="Time Taken"
+                                        value={formatTime(timeTaken)}
+                                        color={colors.secondary}
+                                    />
                                 </Col>
                                 <Col md={2}>
-                                    <div className="p-3" style={{ backgroundColor: colors.light, borderRadius: '8px' }}>
-                                        <div className="mb-2">
-                                            <Trophy size={30} style={{ color: '#ffa500' }} />
-                                        </div>
-                                        <h5>XP Earned</h5>
-                                        <p className="h3 mb-0">
-                                            {/* If number of correct == number of questions ; quizDetails.xp , otherwise 0*/}
-                                            {correctAnswers === totalQuestions ? quizDetails.xp : 0}
-                                        </p>
-                                    </div>
+                                    <StatBox 
+                                        icon={<Trophy size={30} style={{ color: '#ffa500' }} />}
+                                        title="XP Earned"
+                                        value={correctAnswers === totalQuestions ? quizDetails.xp : 0}
+                                        color="#ffa500"
+                                        bgColor="#fff9e6"
+                                    />
                                 </Col>
                             </Row>
                         </div>
@@ -255,7 +270,10 @@ const QuizSummary = () => {
                             onClick={toggleQuestionView}
                             style={{
                                 borderColor: colors.primary,
-                                color: colors.primary
+                                color: colors.primary,
+                                borderRadius: '8px',
+                                padding: '8px 16px',
+                                fontWeight: '500'
                             }}
                         >
                             {showAllQuestions ? "Show One Question at a Time" : "Show All Questions"}
@@ -286,48 +304,63 @@ const QuizSummary = () => {
                                 onClick={() => navigateQuestion('prev')}
                                 disabled={currentQuestionIndex === 0}
                                 className="d-flex align-items-center"
+                                style={{
+                                    borderRadius: '8px',
+                                    padding: '10px 20px'
+                                }}
                             >
-                                <ChevronLeft size={18} className="me-1" /> Previous Question
+                                <ChevronLeft size={18} className="me-2" /> Previous Question
                             </Button>
                             <Button 
                                 variant="outline-secondary"
                                 onClick={() => navigateQuestion('next')}
                                 disabled={currentQuestionIndex === questionList.length - 1}
                                 className="d-flex align-items-center"
+                                style={{
+                                    borderRadius: '8px',
+                                    padding: '10px 20px'
+                                }}
                             >
-                                Next Question <ChevronRight size={18} className="ms-1" />
+                                Next Question <ChevronRight size={18} className="ms-2" />
                             </Button>
                         </div>
                     </div>
                 )}
 
-                <div className="text-center align-items-center d-flex justify-content-center gap-4 pb-5">
-                    <Nav.Link href="/quiz-master">
-                        <Button 
-                            variant="primary" 
-                            style={{ 
-                                backgroundColor: colors.primary,
-                                borderColor: colors.primary,
-                                padding: '10px 24px',
-                                fontSize: '1.1rem'
-                            }}
-                        >
-                            Try Other Quizzes!
-                        </Button>
-                    </Nav.Link>
+                <div className="text-center d-flex justify-content-center gap-4 pb-5 mt-4">
+                    <Button 
+                        variant="primary" 
+                        as={Nav.Link}
+                        href="/quiz-master"
+                        style={{ 
+                            backgroundColor: colors.primary,
+                            borderColor: colors.primary,
+                            color: 'white',
+                            padding: '12px 26px',
+                            fontSize: '1.1rem',
+                            borderRadius: '8px',
+                            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        Try Other Quizzes!
+                    </Button>
 
-                    <Nav.Link href="/profile">
-                        <Button 
-                            variant="warning"
-                            style={{ 
-                                borderColor: colors.warning,    
-                                padding: '10px 24px',
-                                fontSize: '1.1rem'
-                            }}
-                        >
-                            Go to Profile
-                        </Button>
-                    </Nav.Link>
+                    <Button 
+                        variant="warning"
+                        as={Nav.Link}
+                        href="/profile"
+                        style={{ 
+                            borderColor: colors.warning,    
+                            padding: '12px 26px',
+                            fontSize: '1.1rem',
+                            borderRadius: '8px',
+                            boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+                            textDecoration: 'none'
+                        }}
+                    >
+                        Go to Profile
+                    </Button>
                 </div>
             </Container>
         </div>
@@ -342,12 +375,13 @@ const QuizSummary = () => {
                     borderRadius: '12px',
                     overflow: 'hidden',
                     borderLeft: `4px solid ${isCorrect ? colors.success : colors.danger}`,
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.08)'
                 }}
             >
                 <Card.Header style={{ 
                     backgroundColor: isCorrect ? '#e6f7e6' : '#f8d7da',
                     borderBottom: `1px solid ${isCorrect ? colors.success : colors.danger}`,
-                    padding: '12px 20px'
+                    padding: '16px 20px'
                 }}>
                     <div className="d-flex align-items-center">
                         <span 
@@ -355,22 +389,27 @@ const QuizSummary = () => {
                             style={{ 
                                 backgroundColor: isCorrect ? colors.success : colors.danger,
                                 color: 'white',
-                                width: '32px',
-                                height: '32px',
+                                width: '36px',
+                                height: '36px',
                                 borderRadius: '50%',
                                 display: 'inline-flex',
                                 alignItems: 'center',
                                 justifyContent: 'center',
-                                fontWeight: 'bold'
+                                fontWeight: 'bold',
+                                fontSize: '1.1rem'
                             }}
                         >
                             {index + 1}
                         </span>
-                        <h5 className="mb-0">Question {index + 1}</h5>
+                        <h5 className="mb-0 fw-bold">Question {index + 1}</h5>
                         <Badge 
                             bg={isCorrect ? "success" : "danger"} 
                             className="ms-auto"
-                            style={{ fontSize: '0.9rem', padding: '5px 10px' }}
+                            style={{ 
+                                fontSize: '0.9rem', 
+                                padding: '6px 12px',
+                                borderRadius: '6px'
+                            }}
                         >
                             {isCorrect ? "CORRECT" : "INCORRECT"}
                         </Badge>
@@ -378,88 +417,90 @@ const QuizSummary = () => {
                 </Card.Header>
                 
                 <Card.Body className="p-4">
-                    <h5 className="mb-4">{q.question}</h5>
+                    <h5 className="mb-4 fw-bold">{q.question}</h5>
                     
                     <div className="mb-4">
-                        <h6 className="mb-3">Choices:</h6>
-                        {Object.keys(q.choices).map((key) => (
-                            <div
-                                key={key}
-                                style={{
-                                    padding: '10px 16px',
-                                    marginBottom: '8px',
-                                    borderRadius: '8px',
-                                    backgroundColor: selectedOptions[q.questionId] === key 
-                                        ? (isCorrect ? '#e6f7e6' : '#f8d7da') 
-                                        : key === q.correctAnswer ? '#e6f7e6' : 'white',
-                                    border: `1px solid ${
-                                        selectedOptions[q.questionId] === key 
-                                            ? (isCorrect ? colors.success : colors.danger) 
-                                            : key === q.correctAnswer ? colors.success : '#dee2e6'
-                                    }`,
-                                    display: 'flex',
-                                    alignItems: 'center'
-                                }}
-                            >
-                                <div 
+                        <h6 className="mb-3 fw-bold">Choices:</h6>
+                        {Object.keys(q.choices).map((key) => {
+                            const isUserSelection = selectedOptions[q.questionId] === key;
+                            const isCorrectAnswer = key === q.correctAnswer;
+                            
+                            return (
+                                <div
+                                    key={key}
                                     style={{
-                                        width: '24px',
-                                        height: '24px',
-                                        borderRadius: '50%',
-                                        marginRight: '12px',
-                                        backgroundColor: selectedOptions[q.questionId] === key 
-                                            ? (isCorrect ? colors.success : colors.danger) 
-                                            : key === q.correctAnswer ? colors.success : colors.light,
-                                        color: (selectedOptions[q.questionId] === key || key === q.correctAnswer) ? 'white' : colors.dark,
+                                        padding: '12px 18px',
+                                        marginBottom: '10px',
+                                        borderRadius: '8px',
+                                        backgroundColor: isUserSelection 
+                                            ? (isCorrect ? '#e6f7e6' : '#f8d7da') 
+                                            : isCorrectAnswer ? '#e6f7e6' : 'white',
+                                        border: `2px solid ${
+                                            isUserSelection 
+                                                ? (isCorrect ? colors.success : colors.danger) 
+                                                : isCorrectAnswer ? colors.success : '#dee2e6'
+                                        }`,
                                         display: 'flex',
                                         alignItems: 'center',
-                                        justifyContent: 'center',
-                                        fontWeight: 'bold',
-                                        fontSize: '0.9rem'
+                                        boxShadow: (isUserSelection || isCorrectAnswer) ? '0 2px 6px rgba(0,0,0,0.08)' : 'none'
                                     }}
                                 >
-                                    {key}
+                                    <div 
+                                        style={{
+                                            width: '28px',
+                                            height: '28px',
+                                            borderRadius: '50%',
+                                            marginRight: '14px',
+                                            backgroundColor: isUserSelection 
+                                                ? (isCorrect ? colors.success : colors.danger) 
+                                                : isCorrectAnswer ? colors.success : colors.light,
+                                            color: (isUserSelection || isCorrectAnswer) ? 'white' : colors.dark,
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            fontWeight: 'bold',
+                                            fontSize: '1rem'
+                                        }}
+                                    >
+                                        {key}
+                                    </div>
+                                    <div className={isCorrectAnswer ? 'fw-bold' : ''}>{q.choices[key]}</div>
+                                    
+                                    {/* Improved visibility for correct answer indicators */}
+                                    {isCorrectAnswer && (
+                                        <div className="ms-auto d-flex align-items-center bg-success text-white px-3 py-2 rounded-pill">
+                                            <ThumbsUp size={16} className="me-1" />
+                                            <span className="fw-bold">Correct Answer</span>
+                                        </div>
+                                    )}
+                                    {isUserSelection && !isCorrectAnswer && (
+                                        <div className="ms-auto d-flex align-items-center bg-danger text-white px-3 py-2 rounded-pill">
+                                            <ThumbsDown size={16} className="me-1" />
+                                            <span className="fw-bold">Your Answer</span>
+                                        </div>
+                                    )}
                                 </div>
-                                <div>{q.choices[key]}</div>
-                                {key === q.correctAnswer && (
-                                    <Badge bg="success" className="ms-auto" style={{ padding: '5px 10px' }}>
-                                        Correct Answer
-                                    </Badge>
-                                )}
-                                {selectedOptions[q.questionId] === key && key !== q.correctAnswer && (
-                                    <Badge bg="danger" className="ms-auto" style={{ padding: '5px 10px' }}>
-                                        Your Answer
-                                    </Badge>
-                                )}
-                            </div>
-                        ))}
+                            );
+                        })}
                     </div>
                     
                     <div 
-                        className="p-3 mt-4" 
+                        className="p-4 mt-4" 
                         style={{ 
                             borderRadius: '8px',
                             backgroundColor: isCorrect ? '#e6f7e6' : '#f8d7da',
-                            borderLeft: `4px solid ${isCorrect ? colors.success : colors.danger}`
+                            borderLeft: `4px solid ${isCorrect ? colors.success : colors.danger}`,
+                            boxShadow: '0 2px 6px rgba(0,0,0,0.05)'
                         }}
                     >
-                        <h6 className="mb-2">
-                            <svg 
-                                xmlns="http://www.w3.org/2000/svg" 
-                                width="18" 
-                                height="18" 
-                                viewBox="0 0 24 24" 
-                                fill="none" 
-                                stroke={isCorrect ? colors.success : colors.danger}
-                                strokeWidth="2" 
-                                strokeLinecap="round" 
-                                strokeLinejoin="round"
-                                style={{ marginRight: '8px' }}
-                            >
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <line x1="12" y1="16" x2="12" y2="12"></line>
-                                <line x1="12" y1="8" x2="12.01" y2="8"></line>
-                            </svg>
+                        <h6 className="mb-2 d-flex align-items-center fw-bold">
+                            <Info 
+                                size={18} 
+                                style={{ 
+                                    marginRight: '10px',
+                                    color: isCorrect ? colors.success : colors.danger 
+                                }}
+                            />
                             Feedback:
                         </h6>
                         <p className="mb-0">{isCorrect ? q.correctFeedback : q.wrongFeedback}</p>
