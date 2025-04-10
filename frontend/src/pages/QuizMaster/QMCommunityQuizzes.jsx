@@ -25,7 +25,7 @@ const QMCommunityQuizzes = () => {
       
       try {
         // Fetch quiz data
-        const quizResponse = await fetch('http://172.31.17.239:5004/get_user_quizzes_details');
+        const quizResponse = await fetch('http://172.31.35.32:5004/get_user_quizzes_details');
         if (!quizResponse.ok) {
           throw new Error('Failed to fetch quiz data');
         }
@@ -34,7 +34,7 @@ const QMCommunityQuizzes = () => {
         setQuizData(quizData);
         
         // Fetch saved quizzes
-        const savedResponse = await fetch(`http://172.31.17.239:5002/get_saved_quizzes/${userId}`);
+        const savedResponse = await fetch(`http://172.31.35.32:5002/get_saved_quizzes/${userId}`);
         if (!savedResponse.ok) {
           throw new Error('Failed to fetch saved quizzes');
         }
@@ -48,7 +48,7 @@ const QMCommunityQuizzes = () => {
 
         // Fetch recommended quizzes
         setIsRecommendationsLoading(true);
-        const recommendedResponse = await fetch(`http://172.31.17.239:5004/get_recommended_quizzes_community/${userId}`);
+        const recommendedResponse = await fetch(`http://172.31.35.32:5004/get_recommended_quizzes_community/${userId}`);
         if (!recommendedResponse.ok) {
           throw new Error('Failed to fetch recommended quizzes');
         }
@@ -57,7 +57,7 @@ const QMCommunityQuizzes = () => {
         setIsRecommendationsLoading(false);
 
         // Fetch user quiz sessions
-        const sessionsResponse = await fetch(`http://172.31.17.239:5006/get_user_quiz_sessions/${userId}`);
+        const sessionsResponse = await fetch(`http://172.31.35.32:5006/get_user_quiz_sessions/${userId}`);
         if (!sessionsResponse.ok) {
           throw new Error('Failed to fetch user quiz sessions');
         }
@@ -153,7 +153,7 @@ const QMCommunityQuizzes = () => {
   // Function to delete a quiz
   const handleDeleteQuiz = async (quizId) => {
     try {
-      const response = await fetch(`http://172.31.17.239:5004/delete_quiz/${quizId}`, {
+      const response = await fetch(`http://172.31.35.32:5004/delete_quiz/${quizId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

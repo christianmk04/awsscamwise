@@ -29,7 +29,7 @@ const RegistrationPage = () => {
         setLoading(true);
 
         try {
-        const response = await fetch('http://172.31.17.239:5001/register_action', {
+        const response = await fetch('http://172.31.35.32:5001/register_action', {
             method: 'POST',
             headers: {
             'Content-Type': 'application/json',

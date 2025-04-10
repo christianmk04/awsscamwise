@@ -33,7 +33,7 @@ const QMDailyPractice = () => {
     // Add this useEffect to fetch leaderboard data
     useEffect(() => {
         if (quizDetails.quizId) {
-            fetch(`http://172.31.17.239:5006/get_quiz_leaderboard/${quizDetails.quizId}`)
+            fetch(`http://172.31.35.32:5006/get_quiz_leaderboard/${quizDetails.quizId}`)
                 .then(response => response.json())
                 .then(data => {
                     // Sort leaderboard by number of correct answers (descending) and time taken (ascending)
@@ -50,7 +50,7 @@ const QMDailyPractice = () => {
     }, [quizDetails.quizId]);
 
     useEffect(() => {
-        fetch(`http://172.31.17.239:5004/get_daily_quiz`)
+        fetch(`http://172.31.35.32:5004/get_daily_quiz`)
             .then(response => response.json())
             .then(data => {
                 setQuizDetails({
@@ -110,7 +110,7 @@ const QMDailyPractice = () => {
             sub_topic: quizDetails.subTopic
         };
 
-        fetch("http://172.31.17.239:5004/new_quiz_submit", {
+        fetch("http://172.31.35.32:5004/new_quiz_submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

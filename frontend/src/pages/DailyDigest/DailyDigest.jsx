@@ -29,7 +29,7 @@ const DailyDigest = () => {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch("http://172.31.17.239:5009/get_all_news");
+        const response = await fetch("http://172.31.35.32:5009/get_all_news");
 
         if (!response.ok) {
           throw new Error("Failed to fetch articles");
@@ -59,7 +59,7 @@ const DailyDigest = () => {
     if (userId) {
       const fetchBookmarkedArticles = async () => {
         try {
-          const response = await fetch(`http://172.31.17.239:5002/get_saved_articles/${userId}`);
+          const response = await fetch(`http://172.31.35.32:5002/get_saved_articles/${userId}`);
           if (!response.ok) {
             throw new Error("Failed to fetch bookmarked articles");
           }
@@ -78,7 +78,7 @@ const DailyDigest = () => {
     const fetchRecommendations = async () => {
       if (!recommendationsSent) {
         try {
-          const response = await fetch("http://172.31.17.239:5009/get_news_recommendation", {
+          const response = await fetch("http://172.31.35.32:5009/get_news_recommendation", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify([...bookmarkedArticles]), // Convert Set to array
@@ -178,8 +178,8 @@ const DailyDigest = () => {
 
     const isBookmarked = bookmarkedArticles.has(articleId);
     const url = isBookmarked
-      ? `http://172.31.17.239:5002/remove_saved_article`
-      : `http://172.31.17.239:5002/add_saved_article`;
+      ? `http://172.31.35.32:5002/remove_saved_article`
+      : `http://172.31.35.32:5002/add_saved_article`;
 
     const json_body = {
       userId: userId,
@@ -230,7 +230,7 @@ const DailyDigest = () => {
       setDeleteStatus("loading");
       setDeleteMessage("Deleting article...");
       
-      const response = await fetch(`http://172.31.17.239:5009/delete_news_article/${articleToDelete.newsId}`, {
+      const response = await fetch(`http://172.31.35.32:5009/delete_news_article/${articleToDelete.newsId}`, {
         method: "DELETE",
       });
   

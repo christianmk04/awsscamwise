@@ -78,7 +78,7 @@ const VerdictButtons = ({ filePath, emailIndex, onNext }) => {
     const answer = userAnswer === "malicious";
 
     console.log("Calling check_answer endpoint with:", filePath, emailIndex, answer);
-    fetch("http://172.31.17.239:5050/check_answer", {
+    fetch("http://172.31.35.32:5050/check_answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ file_path: filePath, number: emailIndex, answer: answer }),
@@ -105,7 +105,7 @@ const VerdictButtons = ({ filePath, emailIndex, onNext }) => {
         setVerdictSubmitted(true);
     
         // Update score in the background (does not block UI)
-        fetch(`http://172.31.17.239:5020/session/update_score/${session_number}`, {
+        fetch(`http://172.31.35.32:5020/session/update_score/${session_number}`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ score: score }),

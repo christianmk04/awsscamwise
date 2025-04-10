@@ -23,7 +23,7 @@ const UserSettings = () => {
         const userId = localStorage.getItem('userId');
 
         // Fetch profile data from microservice
-        const response = await fetch(`http://172.31.17.239:5002/get_account_details/${userId}`, {
+        const response = await fetch(`http://172.31.35.32:5002/get_account_details/${userId}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
@@ -75,7 +75,7 @@ const UserSettings = () => {
     try {
       if (fieldToEdit === "fullName") {
         // Update full name
-        const response = await fetch("http://172.31.17.239:5002/update_full_name", {
+        const response = await fetch("http://172.31.35.32:5002/update_full_name", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -92,7 +92,7 @@ const UserSettings = () => {
       } 
       else if (fieldToEdit === "bio") {
         // Update bio
-        const response = await fetch("http://172.31.17.239:5002/update_bio", {
+        const response = await fetch("http://172.31.35.32:5002/update_bio", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -118,7 +118,7 @@ const UserSettings = () => {
         formData.append('userId', userId);
         formData.append('profilePicture', tempFile);
 
-        const response = await fetch("http://172.31.17.239:5002/update_profile_picture", {
+        const response = await fetch("http://172.31.35.32:5002/update_profile_picture", {
           method: "POST",
           body: formData, // No Content-Type header for FormData
         });
