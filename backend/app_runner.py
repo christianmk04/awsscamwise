@@ -16,8 +16,8 @@ processes = []
 for filename in os.listdir(services_dir):
     if filename.endswith(".py") and filename != "app_runner.py":
 
-        # if filename == "news_scraper.py":
-        #     continue    # Skip the news scraper for now
+        if filename == "news_scraper.py":
+            continue    # Skip the news scraper for now
 
         # Run the microservice through "python filename.py"
         process = subprocess.Popen(["python", os.path.join(services_dir, filename)])
