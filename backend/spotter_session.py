@@ -145,7 +145,7 @@ def set_active():
 
 #Update score and time after each email is done
 @app.route("/session/update_score/<session_id>", methods=["PUT"])
-@cross_origin(origins="http://172.31.17.239:5173")  
+@cross_origin(origins="http://172.31.35.32:5173")  
 def update_score(session_id):
     try:
         # time = request.json['time']
