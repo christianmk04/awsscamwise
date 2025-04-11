@@ -91,7 +91,7 @@ const EditCustomQuiz = () => {
 
       try {
         // Fetch topics (similar to CreateCustomQuiz)
-        const topicEndpoint = 'http://172.31.35.32:5004/get_topics';
+        const topicEndpoint = 'http://18.214.76.26:5004/get_topics';
         const topicsResponse = await fetch(topicEndpoint);
         if (topicsResponse.ok) {
           const data = await topicsResponse.json();
@@ -108,7 +108,7 @@ const EditCustomQuiz = () => {
         }
         
         // Fetch quiz details
-        const detailsResponse = await fetch(`http://172.31.35.32:5004/get_quiz_details/${quizId}`);
+        const detailsResponse = await fetch(`http://18.214.76.26:5004/get_quiz_details/${quizId}`);
         
         if (!detailsResponse.ok) {
           throw new Error('Failed to fetch quiz details');
@@ -123,7 +123,7 @@ const EditCustomQuiz = () => {
         setDifficultyLevel(quizDetails.difficulty);
 
         // Fetch quiz questions
-        const questionsResponse = await fetch(`http://172.31.35.32:5005/get_quiz_questions/${quizId}`);
+        const questionsResponse = await fetch(`http://18.214.76.26:5005/get_quiz_questions/${quizId}`);
 
         if (!questionsResponse.ok) {
           throw new Error('Failed to fetch quiz questions');
@@ -263,7 +263,7 @@ const EditCustomQuiz = () => {
     };
 
     try {
-      const response = await fetch("http://172.31.35.32:5004/edit_quiz", {
+      const response = await fetch("http://18.214.76.26:5004/edit_quiz", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

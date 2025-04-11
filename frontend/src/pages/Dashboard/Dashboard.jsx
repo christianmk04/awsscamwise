@@ -48,7 +48,7 @@ const Dashboard = () => {
 
       try {
         // 1. Fetch profile details from the backend
-        const profileResponse = await fetch('http://172.31.35.32:5002/get_profile_details/' + userId);
+        const profileResponse = await fetch('http://18.214.76.26:5002/get_profile_details/' + userId);
         if (!profileResponse.ok) {
           throw new Error(`Error: ${profileResponse.status} ${profileResponse.statusText}`);
         }
@@ -57,7 +57,7 @@ const Dashboard = () => {
         setUserName(profileData.fullName);
 
         // 2. Fetch user quizzes from the backend
-        const quizzesResponse = await fetch('http://172.31.35.32:5004/get_user_quizzes/' + userId);
+        const quizzesResponse = await fetch('http://18.214.76.26:5004/get_user_quizzes/' + userId);
         if (!quizzesResponse.ok) {
           throw new Error(`Error: ${quizzesResponse.status} ${quizzesResponse.statusText}`);
         }
@@ -72,7 +72,7 @@ const Dashboard = () => {
         };
 
         // 3. Fetch user progress from the backend
-        const progressResponse = await fetch('http://172.31.35.32:5008/get_progress', {
+        const progressResponse = await fetch('http://18.214.76.26:5008/get_progress', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ const Dashboard = () => {
         setUserProgress(progressData);
 
         // 4. Fetch Badges from the backend
-        const badgesResponse = await fetch('http://172.31.35.32:5008/get_badges', {
+        const badgesResponse = await fetch('http://18.214.76.26:5008/get_badges', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -100,7 +100,7 @@ const Dashboard = () => {
         setBadges(badgesData);
 
         // 5. Fetch all quiz data from the backend
-        const allQuizResponse = await fetch('http://172.31.35.32:5004/get_custom_quizzes_details');
+        const allQuizResponse = await fetch('http://18.214.76.26:5004/get_custom_quizzes_details');
         if (!allQuizResponse.ok) {
           throw new Error(`Error: ${allQuizResponse.status} ${allQuizResponse.statusText}`);
         }
@@ -108,7 +108,7 @@ const Dashboard = () => {
         setAllQuizData(allQuizData);
 
         // 6. Fetch user sessions from the backend
-        const userSessionsResponse = await fetch('http://172.31.35.32:5006/get_user_quiz_sessions/' + userId);
+        const userSessionsResponse = await fetch('http://18.214.76.26:5006/get_user_quiz_sessions/' + userId);
         if (!userSessionsResponse.ok) {
           throw new Error(`Error: ${userSessionsResponse.status} ${userSessionsResponse.statusText}`);
         }
@@ -121,7 +121,7 @@ const Dashboard = () => {
         }
 
         // 7. Fetch email data from the backend
-      const emailDataResponse = await fetch('http://172.31.35.32:5015/get_email_records/' + userId);
+      const emailDataResponse = await fetch('http://18.214.76.26:5015/get_email_records/' + userId);
       if (!emailDataResponse.ok) {
         throw new Error(`Error: ${emailDataResponse.status} ${emailDataResponse.statusText}`);
       }

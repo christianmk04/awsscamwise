@@ -88,7 +88,7 @@ const SSPractice = () => {
     setExplanationsComplete(false);
     
     try {
-      const response = await fetch("http://172.31.35.32:5050/fetch_email", {
+      const response = await fetch("http://18.214.76.26:5050/fetch_email", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -134,7 +134,7 @@ const SSPractice = () => {
     if (filePath) {
       const fetchFileMetadata = async () => {
         try {
-          const response = await fetch("http://172.31.35.32:5010/file_metadata", {
+          const response = await fetch("http://18.214.76.26:5010/file_metadata", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",

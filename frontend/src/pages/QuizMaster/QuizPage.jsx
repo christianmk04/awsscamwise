@@ -32,7 +32,7 @@ const QuizPage = () => {
 
     useEffect(() => {
         if (quizDetails.quizId) {
-            fetch(`http://172.31.35.32:5005/get_quiz_questions/${quizDetails.quizId}`)
+            fetch(`http://18.214.76.26:5005/get_quiz_questions/${quizDetails.quizId}`)
                 .then(response => response.json())
                 .then(data => setQuestionList(data))
                 .catch(error => console.error('Error fetching quiz questions:', error));
@@ -42,7 +42,7 @@ const QuizPage = () => {
     // Add this useEffect to fetch leaderboard data
     useEffect(() => {
         if (quizDetails.quizId) {
-            fetch(`http://172.31.35.32:5006/get_quiz_leaderboard/${quizDetails.quizId}`)
+            fetch(`http://18.214.76.26:5006/get_quiz_leaderboard/${quizDetails.quizId}`)
                 .then(response => response.json())
                 .then(data => {
                     // Sort leaderboard by number of correct answers (descending) and time taken (ascending)
@@ -102,7 +102,7 @@ const QuizPage = () => {
             sub_topic: quizDetails.subTopic
         };
 
-        fetch("http://172.31.35.32:5004/new_quiz_submit", {
+        fetch("http://18.214.76.26:5004/new_quiz_submit", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

@@ -31,7 +31,7 @@ const LoginPage = () => {
     setLoading(true); // Set loading state to true
 
     try {
-      const response = await fetch('http://172.31.35.32:5001/login_action', {
+      const response = await fetch('http://18.214.76.26:5001/login_action', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,13 +53,13 @@ const LoginPage = () => {
 
           // Check if data.firstTimeLogin is true
           if (data.firstTimeLogin) {
-            // Redirect to 172.31.35.32:5173/first-time-details and pass the user ID as a query parameter
+            // Redirect to 18.214.76.26:5173/first-time-details and pass the user ID as a query parameter
             navigate(`/first-time-details`);
             return;
           }
 
           console.log('Login successful:', data.message);
-          navigate(`/home`); // Redirect to 172.31.35.32:5173/
+          navigate(`/home`); // Redirect to 18.214.76.26:5173/
         } else {
           console.error('Login failed:', data.message);
           setErrorMessage(data.message); // Set error message from server

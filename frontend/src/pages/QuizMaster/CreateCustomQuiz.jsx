@@ -79,7 +79,7 @@ const CreateCustomQuiz = () => {
 
   useEffect(() => {
     const fetchTopics = async () => {
-      const topicEndpoint = 'http://172.31.35.32:5004/get_topics';
+      const topicEndpoint = 'http://18.214.76.26:5004/get_topics';
       try {
         const response = await fetch(topicEndpoint);
         if (!response.ok) {
@@ -227,7 +227,7 @@ const CreateCustomQuiz = () => {
     };
 
     try {
-      const response = await fetch("http://172.31.35.32:5004/add_quiz", {
+      const response = await fetch("http://18.214.76.26:5004/add_quiz", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

@@ -48,7 +48,7 @@ const NavBar2 = () => {
 
         const fetchUserDetails = async () => {
             try {
-                const response = await fetch('http://172.31.35.32:5002/get_account_details/' + userId);
+                const response = await fetch('http://18.214.76.26:5002/get_account_details/' + userId);
 
                 if (!response.ok) {
                     throw new Error('Failed to fetch user details');

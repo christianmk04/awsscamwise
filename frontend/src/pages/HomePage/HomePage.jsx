@@ -57,7 +57,7 @@ const HomePage = () => {
         console.log('User Role:', role);
 
         // Fetch user details
-        const userResponse = await fetch(`http://172.31.35.32:5002/get_user_details_home/${userId}`);
+        const userResponse = await fetch(`http://18.214.76.26:5002/get_user_details_home/${userId}`);
         if (!userResponse.ok) {
           throw new Error('Failed to fetch user details');
         }
@@ -66,7 +66,7 @@ const HomePage = () => {
         setUserDetails(userData);
 
         // Fetch recommended quiz
-        const quizResponse = await fetch(`http://172.31.35.32:5004/get_recommended_quizzes_community/${userId}`);
+        const quizResponse = await fetch(`http://18.214.76.26:5004/get_recommended_quizzes_community/${userId}`);
         if (!quizResponse.ok) {
           throw new Error('Failed to fetch quiz recommendations');
         }
@@ -79,7 +79,7 @@ const HomePage = () => {
 
         // Fetch news recommendation
         const bookmarkedArticles = userData.savedArticles || [];
-        const newsResponse = await fetch('http://172.31.35.32:5009/get_news_recommendation', {
+        const newsResponse = await fetch('http://18.214.76.26:5009/get_news_recommendation', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
