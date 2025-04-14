@@ -8,8 +8,8 @@ import random
 app = Flask(__name__)
 CORS(app)
 
-ss_session_url = "http://172.31.35.32:5020"
-ss_email_url = "http://172.31.35.32:5010"
+ss_session_url = "http://172.31.31.39:5020"
+ss_email_url = "http://172.31.31.39:5010"
 
 # Use a relative temp directory inside the project
 # TEMP_DIR = os.path.join(os.getcwd(), "temp_ss_session")
@@ -111,7 +111,7 @@ def fetch_email():
         return jsonify({"error": str(e)}), 500
 
 @app.route("/check_answer", methods=['POST'])
-@cross_origin(origins="http://172.31.35.32:5173")  
+@cross_origin(origins="http://172.31.31.39:5173")  
 def check_answer():
     try:
         res = request.get_json()
@@ -141,7 +141,7 @@ def check_answer():
 def end_completed_session(session_number, time_taken, hints):
     try:
         #1. CLOSE SESSION
-        close_session_url = f"http://172.31.35.32:5020/session/close_session/{session_number}"
+        close_session_url = f"http://172.31.31.39:5020/session/close_session/{session_number}"
         res = requests.put(close_session_url)
         
         if res.status_code != 200:
@@ -151,7 +151,7 @@ def end_completed_session(session_number, time_taken, hints):
             print("Session closed successfully")
 
         #2. UPDATE TIME
-        update_time_url = f"http://172.31.35.32:5020/session/update_time/{session_number}"
+        update_time_url = f"http://172.31.31.39:5020/session/update_time/{session_number}"
         print(f"Updating time with request: {update_time_url}")
         res = requests.put(update_time_url, json={"time_taken": time_taken})
         
@@ -197,7 +197,7 @@ def end_completed_session(session_number, time_taken, hints):
         random_compliment = random.choice(compliment_list) if compliment_list else "Great job!"
         
         #4. UPDATE SESSION SCORES WITH BONUS SCORES
-        update_session_scores_url = f"http://172.31.35.32:5020/session/update_score/{session_number}"
+        update_session_scores_url = f"http://172.31.31.39:5020/session/update_score/{session_number}"
         print(f"Making request to update score: {update_session_scores_url}")
         res = requests.put(update_session_scores_url, json={"score": bonus_time_xp + bonus_score_xp - (hints * 5)})
         
@@ -206,7 +206,7 @@ def end_completed_session(session_number, time_taken, hints):
             return jsonify({"error": "Failed to update session score"}), 500
 
         #5. GET USER ID FROM SESSION AND UPDATE USER SCORE
-        get_user_id_url = f"http://172.31.35.32:5020/session/{session_number}"
+        get_user_id_url = f"http://172.31.31.39:5020/session/{session_number}"
         res = requests.get(get_user_id_url)
         
         if res.status_code != 200:
@@ -220,7 +220,7 @@ def end_completed_session(session_number, time_taken, hints):
 
         print(f"user_id: {userId}")
 
-        update_user_scores_url = f"http://172.31.35.32:5002/update_spotter_xp/{userId}"
+        update_user_scores_url = f"http://172.31.31.39:5002/update_spotter_xp/{userId}"
         res = requests.put(update_user_scores_url, json={"spotterXP": bonus_score_xp + bonus_time_xp+ score - (hints * 5)})
         if res.status_code != 200:
             print(f"Failed to update user score, status code: {res.status_code}")

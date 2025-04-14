@@ -6,10 +6,10 @@ import requests
 app = Flask(__name__)
 CORS(app)
 
-ss_email_url = "http://172.31.35.32:5010"
-ss_session_url = "http://172.31.35.32:5020"
-user_url = "http://172.31.35.32:5002"
-ss_handler_url = "http://172.31.35.32:5050"
+ss_email_url = "http://172.31.31.39:5010"
+ss_session_url = "http://172.31.31.39:5020"
+user_url = "http://172.31.31.39:5002"
+ss_handler_url = "http://172.31.31.39:5050"
 
 def has_active_session(user_id):
     try:
@@ -49,7 +49,7 @@ def has_active_session(user_id):
         
 
 @app.route('/process_ss_request', methods=['PUT'])
-@cross_origin(origins="http://172.31.35.32:5173")  
+@cross_origin(origins="http://172.31.31.39:5173")  
 def process_session_request():
     print("inside process session request")
     user_id = request.json.get('user_id')

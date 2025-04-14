@@ -44,7 +44,7 @@ const ProfilePageMain = () => {
 
       try {
         // 1. Fetch profile details from the backend
-        const profileResponse = await fetch('http://18.214.76.26:5002/get_profile_details/' + userId);
+        const profileResponse = await fetch('http://0.0.0.0:5002/get_profile_details/' + userId);
         if (!profileResponse.ok) {
           throw new Error(`Error: ${profileResponse.status} ${profileResponse.statusText}`);
         }
@@ -52,7 +52,7 @@ const ProfilePageMain = () => {
         setProfileDetails(profileData);
 
         // 2. Fetch user quizzes from the backend
-        const quizzesResponse = await fetch('http://18.214.76.26:5004/get_user_quizzes/' + userId);
+        const quizzesResponse = await fetch('http://0.0.0.0:5004/get_user_quizzes/' + userId);
         if (!quizzesResponse.ok) {
           throw new Error(`Error: ${quizzesResponse.status} ${quizzesResponse.statusText}`);
         }
@@ -60,7 +60,7 @@ const ProfilePageMain = () => {
         setUserQuizzes(quizzesData.length === 0 ? [] : quizzesData);
 
         // 3. Fetch saved articles
-        const savedArticlesResponse = await fetch('http://18.214.76.26:5002/get_saved_articles/' + userId);
+        const savedArticlesResponse = await fetch('http://0.0.0.0:5002/get_saved_articles/' + userId);
         if (!savedArticlesResponse.ok) {
           throw new Error(`Error: ${savedArticlesResponse.status} ${savedArticlesResponse.statusText}`);
         }
@@ -71,7 +71,7 @@ const ProfilePageMain = () => {
         } else {
           const savedArticles = await Promise.all(
             savedArticlesResponseData.map(async (articleId) => {
-              const articleResponse = await fetch('http://18.214.76.26:5009/get_news_by_id/' + articleId);
+              const articleResponse = await fetch('http://0.0.0.0:5009/get_news_by_id/' + articleId);
               if (!articleResponse.ok) {
                 throw new Error(`Error: ${articleResponse.status} ${articleResponse.statusText}`);
               }
@@ -82,7 +82,7 @@ const ProfilePageMain = () => {
         } 
         
         // 4. Fetch saved quizzes
-        const savedQuizzesResponse = await fetch('http://18.214.76.26:5002/get_saved_quizzes/' + userId);
+        const savedQuizzesResponse = await fetch('http://0.0.0.0:5002/get_saved_quizzes/' + userId);
         if (!savedQuizzesResponse.ok) {
           throw new Error(`Error: ${savedQuizzesResponse.status} ${savedQuizzesResponse.statusText}`);
         }
@@ -90,7 +90,7 @@ const ProfilePageMain = () => {
 
         const savedQuizzes = await Promise.all(
           savedQuizzesResponseData.map(async (quizId) => {
-            const quizResponse = await fetch('http://18.214.76.26:5004/get_quiz_details/' + quizId);
+            const quizResponse = await fetch('http://0.0.0.0:5004/get_quiz_details/' + quizId);
             if (!quizResponse.ok) {
               throw new Error(`Error: ${quizResponse.status} ${quizResponse.statusText}`);
             }
@@ -118,7 +118,7 @@ const ProfilePageMain = () => {
         articleId: articleId
       };
 
-      await fetch('http://18.214.76.26:5002/remove_saved_article', {
+      await fetch('http://0.0.0.0:5002/remove_saved_article', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(json_body)
@@ -138,7 +138,7 @@ const ProfilePageMain = () => {
         quizId: quizId
       };
 
-      await fetch('http://18.214.76.26:5002/remove_saved_quiz', {
+      await fetch('http://0.0.0.0:5002/remove_saved_quiz', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(json_body)

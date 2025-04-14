@@ -235,8 +235,8 @@ def send_reset_password_email(email, reset_link):
 
 @app.route("/email_verification_success", methods=["GET", "POST"])
 def email_verification_success():
-    # Direct user to the login page at 172.31.35.32:5173/verify-email
-    return redirect("http://172.31.35.32:5173/verify-email")
+    # Direct user to the login page at 172.31.31.39:5173/verify-email
+    return redirect("http://172.31.31.39:5173/verify-email")
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -298,7 +298,7 @@ def login_action():
                             login_user(user)
 
                             # Get User Role from endpoint
-                            endpoint = f"http://172.31.35.32:5002/get_user_role/{user_id}"
+                            endpoint = f"http://172.31.31.39:5002/get_user_role/{user_id}"
                             response = requests.get(endpoint)
                             print(response.json())
                             role = response.json()["role"]

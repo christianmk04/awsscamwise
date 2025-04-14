@@ -226,7 +226,7 @@ const QuizCard = ({ quiz, onDelete }) => {
   const fetchQuizQuestions = async (quizId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://18.214.76.26:5005/get_quiz_questions/${quizId}`);
+      const response = await fetch(`http://0.0.0.0:5005/get_quiz_questions/${quizId}`);
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
@@ -249,7 +249,7 @@ const QuizCard = ({ quiz, onDelete }) => {
     setDeleteStatus("loading");
 
     try {
-      const response = await fetch(`http://18.214.76.26:5004/delete_quiz/${quiz.quizId}`, {
+      const response = await fetch(`http://0.0.0.0:5004/delete_quiz/${quiz.quizId}`, {
         method: "DELETE",
       });
 

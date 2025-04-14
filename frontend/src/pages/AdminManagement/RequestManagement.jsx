@@ -264,7 +264,7 @@ const RequestManagement = () => {
     const fetchPendingQuizzes = async () => {
       try {
         setLoading(true);
-        const response = await fetch('http://18.214.76.26:5004/get_pending_quizzes');
+        const response = await fetch('http://0.0.0.0:5004/get_pending_quizzes');
         
         if (!response.ok) {
           throw new Error(`Error: ${response.status} ${response.statusText}`);
@@ -287,7 +287,7 @@ const RequestManagement = () => {
   const fetchQuizQuestions = async (quizId) => {
     try {
       setLoading(true);
-      const response = await fetch(`http://18.214.76.26:5005/get_quiz_questions/${quizId}`);
+      const response = await fetch(`http://0.0.0.0:5005/get_quiz_questions/${quizId}`);
       
       if (!response.ok) {
         throw new Error(`Error: ${response.status} ${response.statusText}`);
@@ -330,8 +330,8 @@ const RequestManagement = () => {
       setLoading(true);
       
       const endpoint = confirmAction === 'accept' 
-        ? `http://18.214.76.26:5004/accept_pending_quiz/${selectedQuiz.quizId}`
-        : `http://18.214.76.26:5004/reject_pending_quiz/${selectedQuiz.quizId}`;
+        ? `http://0.0.0.0:5004/accept_pending_quiz/${selectedQuiz.quizId}`
+        : `http://0.0.0.0:5004/reject_pending_quiz/${selectedQuiz.quizId}`;
       
       const response = await fetch(endpoint, {
         method: 'PUT',

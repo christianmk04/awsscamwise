@@ -184,7 +184,7 @@ def delete_news_article(newsId):
         return jsonify({"message": "News article not found"}), 404
     
     # Remove news article from all users saved_articles
-    endpoint = f"http://172.31.35.32:5002/clear_deleted_article/{newsId}"
+    endpoint = f"http://172.31.31.39:5002/clear_deleted_article/{newsId}"
     response = requests.post(endpoint)
     print(response.json)
 

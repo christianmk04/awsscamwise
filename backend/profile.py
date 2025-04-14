@@ -285,8 +285,8 @@ def get_user_details_home(userId):
     userId = int(userId)
     curr_user = User.query.filter_by(user_id=userId).first()
 
-    # Get user progress for the badges --> badge service is 172.31.35.32:5008, pass in spotterXP and quizXP and numQuizzes
-    # progress_service_url = "http://172.31.35.32:5008/get_progress"
+    # Get user progress for the badges --> badge service is 172.31.31.39:5008, pass in spotterXP and quizXP and numQuizzes
+    # progress_service_url = "http://172.31.31.39:5008/get_progress"
     # progress_service_payload = {
     #     "spotterXP": curr_user.spotter_xp,
     #     "quizXP": curr_user.quiz_xp,

@@ -111,8 +111,8 @@ def add_quiz_session():
 
     # Streak Management - Check if user has attempted a quiz in the past 24 hours, if yes then don't update the streak, else update the streak
     
-    # Send streakXP to 172.31.35.32:5002/update_streak_xp/<userId> with streak_xp as the payload
-    endpoint = f"http://172.31.35.32:5002/manage_streak/{user_id}"
+    # Send streakXP to 172.31.31.39:5002/update_streak_xp/<userId> with streak_xp as the payload
+    endpoint = f"http://172.31.31.39:5002/manage_streak/{user_id}"
     payload = {
         "mode": "increment"
     }
@@ -160,14 +160,14 @@ def get_quiz_leaderboard(quiz_id):
         leaderboard = leaderboard[:5]
 
     # For each session, get the user's name and profile picture from 
-    # 172.31.35.32:5002/get_user_profile/<userId> and add to the session object
+    # 172.31.31.39:5002/get_user_profile/<userId> and add to the session object
 
     # Get all unique user ids
     user_ids = list(set([session.user_id for session in leaderboard]))
     
     # Get user profiles
     user_profiles = []
-    endpoint = "http://172.31.35.32:5002/get_multiple_account_details"
+    endpoint = "http://172.31.31.39:5002/get_multiple_account_details"
     payload = {
         "user_ids": user_ids
     }

@@ -299,7 +299,7 @@ def add_quiz():
 
     for question in questions:
         
-        add_question_endpoint = f"http://172.31.35.32:5005/add_question"
+        add_question_endpoint = f"http://172.31.31.39:5005/add_question"
 
         question_payload = {
             "quizId": new_quiz.quiz_id,
@@ -347,7 +347,7 @@ def edit_quiz():
         
         print(question)
 
-        edit_question_endpoint = f"http://172.31.35.32:5005/update_question"
+        edit_question_endpoint = f"http://172.31.31.39:5005/update_question"
 
         question_payload = {
             "quizId": quiz_id,
@@ -372,18 +372,18 @@ def delete_quiz(quizId):
     quiz = Quiz.query.filter_by(quiz_id=quizId).first()
 
     # Delete all questions associated with the quiz
-    delete_questions_endpoint = f"http://172.31.35.32:5005/delete_questions/{quizId}"
+    delete_questions_endpoint = f"http://172.31.31.39:5005/delete_questions/{quizId}"
     response = requests.delete(delete_questions_endpoint)
 
     # Clear all users saved_quizzes that have the quiz_id
-    clear_saved_quizzes_endpoint = f"http://172.31.35.32:5002/clear_deleted_quiz"
+    clear_saved_quizzes_endpoint = f"http://172.31.31.39:5002/clear_deleted_quiz"
     payload = {
         "quizId": quizId
     }
     response = requests.post(clear_saved_quizzes_endpoint, json=payload)
 
     # Delete all quiz_sessions that have the quiz_id
-    delete_quiz_sessions_endpoint = f"http://172.31.35.32:5006/delete_quiz_sessions/{quizId}"
+    delete_quiz_sessions_endpoint = f"http://172.31.31.39:5006/delete_quiz_sessions/{quizId}"
     response = requests.delete(delete_quiz_sessions_endpoint)
 
     # Delete Quiz
@@ -615,7 +615,7 @@ def generate_daily_quiz():
 
         for question in questions_list:
 
-            add_question_endpoint = f"http://172.31.35.32:5005/add_question"
+            add_question_endpoint = f"http://172.31.31.39:5005/add_question"
 
             question_payload = {
                 "quizId": new_quiz.quiz_id,
@@ -667,7 +667,7 @@ def get_daily_quiz():
     quiz_id = daily_quiz.quiz_id
 
     # Get all questions for the daily quiz
-    endpoint = f"http://172.31.35.32:5005/get_quiz_questions/{quiz_id}"
+    endpoint = f"http://172.31.31.39:5005/get_quiz_questions/{quiz_id}"
     response = requests.get(endpoint)
     quiz_questions = response.json()
 
@@ -747,7 +747,7 @@ def new_quiz_session():
     db.session.commit()
 
     # Get questions for the quiz
-    quiz_questions_endpoint = f"http://172.31.35.32:5005/get_quiz_questions/{quiz_id}"
+    quiz_questions_endpoint = f"http://172.31.31.39:5005/get_quiz_questions/{quiz_id}"
     response = requests.get(quiz_questions_endpoint)
     quiz_questions = response.json()
 
@@ -763,7 +763,7 @@ def new_quiz_session():
     print("Number of correct answers: ", num_correct)
 
     # Initiate QuizSession Creation
-    session_creation_endpoint = f"http://172.31.35.32:5006/add_quiz_session"
+    session_creation_endpoint = f"http://172.31.31.39:5006/add_quiz_session"
     session_payload = {
         "user_id": user_id,
         "quiz_id": quiz_id,
@@ -778,8 +778,8 @@ def new_quiz_session():
     response = requests.post(session_creation_endpoint, json=session_payload)
     session_xp = response.json()["session_xp"]
 
-    # Send quizXP to 172.31.35.32:5002/update_quiz_xp/<userId> with total_xp as the payload
-    endpoint = f"http://172.31.35.32:5002/update_quiz_xp/{user_id}"
+    # Send quizXP to 172.31.31.39:5002/update_quiz_xp/<userId> with total_xp as the payload
+    endpoint = f"http://172.31.31.39:5002/update_quiz_xp/{user_id}"
     payload = {
         "quizXP": session_xp
     }
@@ -821,7 +821,7 @@ def get_recommended_quizzes(userId):
         return quiz_db
 
     # Get user quiz sessions
-    quiz_sessions_endpoint = f"http://172.31.35.32:5006/get_user_quiz_sessions/{userId}"
+    quiz_sessions_endpoint = f"http://172.31.31.39:5006/get_user_quiz_sessions/{userId}"
     response = requests.get(quiz_sessions_endpoint)
     user_quiz_sessions = response.json()
 
@@ -910,7 +910,7 @@ def get_recommended_quizzes_user(userId):
         return quiz_db
     
     # Get user quiz sessions
-    quiz_sessions_endpoint = f"http://172.31.35.32:5006/get_user_quiz_sessions/{userId}"
+    quiz_sessions_endpoint = f"http://172.31.31.39:5006/get_user_quiz_sessions/{userId}"
     response = requests.get(quiz_sessions_endpoint)
     user_quiz_sessions = response.json()
     

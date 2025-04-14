@@ -14,7 +14,7 @@ const PrevQuizzes = () => {
         const fetchDailyQuizQuestions = async () => {
             try {
 
-                const response = await fetch("http://18.214.76.26:5004/get_daily_quiz_details");
+                const response = await fetch("http://0.0.0.0:5004/get_daily_quiz_details");
                 const data = await response.json();
                 setQuizData(data);
                 

@@ -25,7 +25,7 @@ const QMCustomPractice = () => {
       
       try {
         // Fetch quiz data
-        const quizResponse = await fetch('http://18.214.76.26:5004/get_custom_quizzes_details');
+        const quizResponse = await fetch('http://0.0.0.0:5004/get_custom_quizzes_details');
         if (!quizResponse.ok) {
           throw new Error('Failed to fetch quiz data');
         }
@@ -33,7 +33,7 @@ const QMCustomPractice = () => {
         setQuizData(quizData);
         
         // Fetch saved quizzes
-        const savedResponse = await fetch(`http://18.214.76.26:5002/get_saved_quizzes/${userId}`);
+        const savedResponse = await fetch(`http://0.0.0.0:5002/get_saved_quizzes/${userId}`);
         if (!savedResponse.ok) {
           throw new Error('Failed to fetch saved quizzes');
         }
@@ -47,7 +47,7 @@ const QMCustomPractice = () => {
 
         // Fetch recommended quizzes
         setIsRecommendationsLoading(true);
-        const recommendedResponse = await fetch(`http://18.214.76.26:5004/get_recommended_quizzes_custom/${userId}`);
+        const recommendedResponse = await fetch(`http://0.0.0.0:5004/get_recommended_quizzes_custom/${userId}`);
         if (!recommendedResponse.ok) {
           throw new Error('Failed to fetch recommended quizzes');
         }
@@ -56,7 +56,7 @@ const QMCustomPractice = () => {
         setIsRecommendationsLoading(false);
 
         // Fetch user quiz sessions
-        const sessionsResponse = await fetch(`http://18.214.76.26:5006/get_user_quiz_sessions/${userId}`);
+        const sessionsResponse = await fetch(`http://0.0.0.0:5006/get_user_quiz_sessions/${userId}`);
         if (!sessionsResponse.ok) {
           throw new Error('Failed to fetch user quiz sessions');
         }
@@ -155,7 +155,7 @@ const QMCustomPractice = () => {
 
   const handleDeleteQuiz = async (quizId) => {
     try {
-      const response = await fetch(`http://18.214.76.26:5004/delete_quiz/${quizId}`, {
+      const response = await fetch(`http://0.0.0.0:5004/delete_quiz/${quizId}`, {
         method: 'DELETE',
       });
       if (!response.ok) {

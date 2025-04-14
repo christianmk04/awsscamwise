@@ -4,7 +4,7 @@ import SelectionCard from '../../components/ScamSpotterQuizMaster/SelectionCard'
 import { Container, Row, Col } from 'react-bootstrap';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
-const process_ss_request_url = "http://18.214.76.26:5030/process_ss_request";
+const process_ss_request_url = "http://0.0.0.0:5030/process_ss_request";
 
 const ScamSpotterLanding = () => {
   const [isLoading, setIsLoading] = useState(false);

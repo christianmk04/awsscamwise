@@ -46,7 +46,7 @@ const FirstTimeDetails = () => {
       // extract userId from local storage
       const userId = localStorage.getItem('userId');
 
-      const response = await fetch('http://18.214.76.26:5002/first_time_details/' + userId, {
+      const response = await fetch('http://0.0.0.0:5002/first_time_details/' + userId, {
         method: 'POST',
         body: formData,
       });
